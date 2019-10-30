@@ -22,3 +22,9 @@
 ### 13. Acessando Dados na Instância VueJS
 
 - Vale lembrar que uma propriedade e um método, por exemplo, não poderão ter o mesmo nome, pois os atributos são colocados "na raiz" da instância do objeto Vue. Com isso, os nomes não podem ser duplicados!
+
+### 14. Binding de Atributos
+
+- O `v-bind` serve para fazer uma ligação entre algo que está na VueInstance e um atributo da tag dentro do template. Exemplo de uso:
+  - `<a v-bind:href="link">Google</a>`
+  - `link` = '<http://google.com.br'>
