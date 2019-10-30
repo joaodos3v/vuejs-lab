@@ -28,3 +28,8 @@
 - O `v-bind` serve para fazer uma ligação entre algo que está na VueInstance e um atributo da tag dentro do template. Exemplo de uso:
   - `<a v-bind:href="link">Google</a>`
   - `link` = '<http://google.com.br'>
+
+### 15. Entendendo e Usando Diretivas
+
+- Uma diretiva é uma propriedade personalizada, que não é nativa do HTML (mas o HTML5 permite que propriedades customizadas sejam criadas).
+  - Essas propriedades são interpretadas pelo VueJS. No VueJS, também é possível criar diretivas próprias (além das do framework).
