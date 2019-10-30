@@ -18,3 +18,7 @@
   - Propriedades reativas do Vue.js
   - Two-way data-binding
   - Como aplicar estilo nas nossas tags
+
+### 13. Acessando Dados na Instância VueJS
+
+- Vale lembrar que uma propriedade e um método, por exemplo, não poderão ter o mesmo nome, pois os atributos são colocados "na raiz" da instância do objeto Vue. Com isso, os nomes não podem ser duplicados!
