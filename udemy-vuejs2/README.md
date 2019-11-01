@@ -48,3 +48,9 @@
 
 - A diretiva `v-on` intercepta eventos. Ou seja, no evento "X", faça "Y".
   - Ex: `<button v-on:click="somar">Somar 1</button>`
+
+### 21. Passando Nossos Próprios Argumentos com Eventos
+
+- Como citado anteriormente, qualquer evento JavaScript que for interpretado vai, automaticamente, enviar o próprio evento como parâmetro para seu método. No entanto, caso você deseje enviar parâmetros customizados na mesma chamada, você deve usar a palavra reservada `$event` para sinalizar essa intenção.
+  - Ex: `<button v-on:click="somar(5, $event)">Somar 5</button>`
+- Inclusive, usar `$` na frente de algumas palavras reservadas é um padrão dentro do framework VueJ.
