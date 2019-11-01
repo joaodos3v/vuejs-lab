@@ -1,0 +1,37 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ contador }}</p>
+    <button v-on:click="somar(5, $event)">Somar 1</button>
+    <p v-on:mousemove="atualizarXY">
+        Mouse: {{ x }} e {{ y }}
+        <span v-on:mousemove.stop.prevent="">PARAR AQUI!!!!!!!!</span>
+    </p>
+    <a v-on:click.prevent="naoNavegar" href="http://google.com">Google</a>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+            x: 0,
+            y: 0,
+        },
+        methods: {
+            somar(passo, evt) {
+                this.contador += passo;
+            },
+            atualizarXY(e) {
+                // Esse parâmetro é passado por padrão sempre que interceptarmos um evento JS
+                console.log(e);
+
+                this.x = e.clientX;
+                this.y = e.clientY;
+            },
+            naoNavegar() {
+                console.log("não navegar");
+            }
+        }
+    })    
+</script>

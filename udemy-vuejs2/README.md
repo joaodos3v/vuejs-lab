@@ -54,3 +54,11 @@
 - Como citado anteriormente, qualquer evento JavaScript que for interpretado vai, automaticamente, enviar o próprio evento como parâmetro para seu método. No entanto, caso você deseje enviar parâmetros customizados na mesma chamada, você deve usar a palavra reservada `$event` para sinalizar essa intenção.
   - Ex: `<button v-on:click="somar(5, $event)">Somar 5</button>`
 - Inclusive, usar `$` na frente de algumas palavras reservadas é um padrão dentro do framework VueJ.
+
+### 23. Modificadores de Eventos
+
+- Esses modificadores são muito úteis para alterar o comportamento natural de um evento JavaScript.
+  - O exemplo mais clássico é o `preventDefault` de um elemento `<a>`, por exemplo. Caso fosse necessário "impedir" seu comportamento natural, ao invés de criar um método que fosse disparado no click e dentro do click chamasse o prevent, basta criar um elemento desta forma:
+    - `<a v-on:click.prevent="" href="http://google.com">Google</a>`
+  - Além desses, o VueJS apresenta vários outros modificadores convenientes nas aplicações do dia a dia.
+    - Veja a [documentação de modificadores de eventos](https://vuejs.org/v2/guide/events.html#Event-Modifiers).
