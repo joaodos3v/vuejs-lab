@@ -43,3 +43,8 @@
 
 - Nas raras vezes em que for necessário criar um elemento HTML completo dentro da instância do VueJS e, então, posteriormente, renderizá-lo, a tag ideal para fazer isso é a `v-html` (que irá interpretar o componente).
   - Esse tipo de situação é citado como perigoso em virtude de ataques de injeção de script que podem ser feitos, como o XSS.
+
+### 20. Escutando Eventos
+
+- A diretiva `v-on` intercepta eventos. Ou seja, no evento "X", faça "Y".
+  - Ex: `<button v-on:click="somar">Somar 1</button>`
