@@ -1,0 +1,52 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <div class="demo" 
+        :class="{c1: aplicarC1}"
+        @click="aplicarC1 = !aplicarC1">
+    </div>
+    
+    <div class="demo"
+        :class="{c1: aplicarC1}">
+    </div>
+    
+    <div class="demo"
+        :class="{'cor-2': aplicarC2}"
+        @click="aplicarC2 = !aplicarC2">
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aplicarC1: false,
+            aplicarC2: true,
+        }
+    });
+</script>
+
+<style>
+    #app {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+    }
+
+    .c1 {
+        background-color: red;
+    }
+
+    .cor-2 {
+        background-color: green;
+    }
+
+    .c3 {
+        background-color: blue;
+    }
+</style>
