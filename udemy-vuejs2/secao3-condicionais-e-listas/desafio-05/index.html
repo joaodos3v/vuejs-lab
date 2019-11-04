@@ -45,12 +45,13 @@
   <h2>#04</h2>
   <ul>
     <li v-for="propriedade in aluno">
-      <span v-if="Array.isArray(propriedade)">
+      <template v-if="Array.isArray(propriedade)">
+        Notas:
         <ul>
           <li v-for="prop in propriedade">{{ prop }}</li>
         </ul>
-      </span>
-      <span v-else>{{ propriedade }}</span>
+      </template>
+      <template v-else>{{ propriedade }}</template>
     </li>
   </ul>
 </div>
