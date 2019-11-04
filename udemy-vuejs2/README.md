@@ -139,6 +139,8 @@
 - A diretiva `v-else` só funcionará se o elemento exatamente anterior ao elemento com essa diretiva possuir um `v-if` ou um `v-else-if`.
 - Quando o `v-if` é utilizado, o elemento será (ou não) **removido** da página.
   - Diferentemente do `v-show`, que apenas "esconde" aquele trecho de HTML.
+    - O `v-show` deve ser usado quando o trecho de HTML é muito grande, pois ele será **menos custoso** para que o framework renderize.
+      - Vale ressaltar que isso é levado em conta quando o elemento não tem "níveis de segurança". Isto é, você não vai esconder o menu dos administradores com `v-show`. Nesse caso, é melhor mesmo realizar um *dettach* com `v-if`.
 
 ### 44. Usando v-if com Template
 
