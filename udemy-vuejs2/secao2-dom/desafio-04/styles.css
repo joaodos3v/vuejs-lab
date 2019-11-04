@@ -13,3 +13,35 @@
 	background-color: gray;
 	width: 50px !important;
 }
+
+/* Tarefa 2 */
+.negrito {
+	font-weight: bold;
+}
+
+.italico {
+	font-style: italic;
+}
+
+/* Tarefa 3 */
+.radius {
+	border-radius: 50%;
+}
+
+.blue {
+	background-color: blue;;
+}
+
+.border {
+	border: 5px solid black;
+}
+
+/* Tarefa 4 */
+.green {
+	padding: 10px;
+	background-color: green;
+}
+
+.altura {
+	height: 500px;
+}
