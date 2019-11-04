@@ -63,3 +63,9 @@
   - Além desses, o VueJS apresenta vários outros modificadores convenientes nas aplicações do dia a dia.
     - Veja a [documentação de modificadores de eventos](https://vuejs.org/v2/guide/events.html#Event-Modifiers).
     - Veja a [documentação de modificadores de teclado](https://vuejs.org/v2/guide/events.html#Key-Modifiers).
+
+### 28. Usando Two-Way-Binding
+
+- Essa técnica funciona como o binding em "duas direções" e engloba as técnicas do `v-bind` e do `v-on` numa única diretiva (`v-model`), pois o HTML atualiza os dados Javascript que são controlados pela VueInstance e o que for atualizado no Vue, gera impacto no HTML.
+  - Quando realiza `v-bind`, ocorre o bind de uma única direção (do Javascript pro HTML).
+  - Enquanto que usando o `v-on`, captura-se um evento que aconteceu no template e altera algo na VueInstance (do HTML pro Javascript).
