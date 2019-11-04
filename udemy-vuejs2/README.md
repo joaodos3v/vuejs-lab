@@ -160,3 +160,8 @@
     <p>Perfil: Admin</p>
 </template>
 ```
+
+### 48. Acessando o índice atual
+
+- Em um `v-for`, para iterar sobre chave e valor, a ordem **sempre é**: VALOR, CHAVE.
+  - Ex.: `<li v-for="(cor, i) in cores">{{ cor }}</li>`
