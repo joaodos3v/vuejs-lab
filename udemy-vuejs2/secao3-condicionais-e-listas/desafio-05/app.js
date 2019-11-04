@@ -1,6 +1,9 @@
 new Vue({
 	el: '#desafio',
 	data: {
+		// Tarefa 1
+		visualizarPrimeiro: true,
+
 		array: ['Pedro', 'Bia', 'Ana', 'Rebeca'],
 		livro: {
 			titulo: 'O Senhor dos Anéis',

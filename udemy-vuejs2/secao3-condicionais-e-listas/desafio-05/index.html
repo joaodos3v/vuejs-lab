@@ -1,5 +1,4 @@
 <script src="https://unpkg.com/vue"></script>
-<script src="app.js"></script>
 
 <div id="desafio">
   <!-- 1) Ligue o botão para alternar a exibição dos dois
@@ -7,18 +6,18 @@
     para ver a diferença -->
   <h2>#01</h2>
   <div>
-    <button>Alternar</button>
-    <p>Você quer me ver ...</p>
-    <p>...ou eu</p>
-    <p>Você quer me ver ...</p>
-    <p>...ou eu</p>
+    <button @click="visualizarPrimeiro = !visualizarPrimeiro">Alternar</button>
+    <p v-if="visualizarPrimeiro">Você quer me ver ...</p>
+    <p v-else>...ou eu</p>
+    <p v-show="visualizarPrimeiro">Você quer me ver ...</p>
+    <p v-show="!visualizarPrimeiro">...ou eu</p>
   </div>
 
   <!-- 2) Exiba em uma <ul> um array de elementos da sua escolha.
     Imprima também o índice de cada elemento. -->
   <h2>#02</h2>
   <ul>
-    <li></li>
+    <li v-for="(pessoa, indice) in array">({{ indice }}) {{ pessoa }}</li>
   </ul>
   
   <!-- 3) Imprimir todos os pares de valor-chave do objeto a seguir:
@@ -30,7 +29,9 @@
     Imprima também o índice de cada item. -->
   <h2>#03</h2>
   <ul>
-    <li></li>
+    <li v-for="(propriedade, chave, indice) in livro">
+      ({{ indice }}) {{ chave }}: {{ propriedade }}
+    </li>
   </ul>
   
   <!-- 4) Imprima o seguinte objeto (somente os valores) e
@@ -43,8 +44,15 @@
     (dica: use v-for e v-if na resolução) -->
   <h2>#04</h2>
   <ul>
-    <li>
-    
+    <li v-for="propriedade in aluno">
+      <span v-if="Array.isArray(propriedade)">
+        <ul>
+          <li v-for="prop in propriedade">{{ prop }}</li>
+        </ul>
+      </span>
+      <span v-else>{{ propriedade }}</span>
     </li>
   </ul>
 </div>
+
+<script src="app.js"></script>
