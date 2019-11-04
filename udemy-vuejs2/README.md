@@ -62,3 +62,4 @@
     - `<a v-on:click.prevent="" href="http://google.com">Google</a>`
   - Além desses, o VueJS apresenta vários outros modificadores convenientes nas aplicações do dia a dia.
     - Veja a [documentação de modificadores de eventos](https://vuejs.org/v2/guide/events.html#Event-Modifiers).
+    - Veja a [documentação de modificadores de teclado](https://vuejs.org/v2/guide/events.html#Key-Modifiers).
