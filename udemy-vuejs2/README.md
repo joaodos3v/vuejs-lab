@@ -1,5 +1,7 @@
 # [Udemy] Curso Vue JS 2 - O Guia Completo (incl. Vue Router & Vuex)
 
+- [Documentação Oficial - Instalação](https://br.vuejs.org/v2/guide/installation.html)
+
 ## Seção 1: Introdução
 
 ### 3. Extendendo Nossa Aplicação VueJS
@@ -117,3 +119,15 @@
     - Ex.: `<button @click="somar">Somar</button>`
   - `v-bind:` pode ser substituído por: `:`
     - Ex.: `<input type="text" :value="contador">`
+
+### ENCERRAMENTO - SEÇÃO 2
+
+- Documentação Oficial - Introdução: https://br.vuejs.org/v2/guide/
+
+- Documentação Oficial - Sintaxe de Template: https://br.vuejs.org/v2/guide/syntax.html
+
+- Documentação Oficial - Manipulação de Eventos: https://br.vuejs.org/v2/guide/events.html
+
+- Documentação Oficial - Dados Computados & Observadores: https://br.vuejs.org/v2/guide/computed.html
+
+- Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.org/v2/guide/class-and-style.html
