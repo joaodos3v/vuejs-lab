@@ -165,3 +165,8 @@
 
 - Em um `v-for`, para iterar sobre chave e valor, a ordem **sempre é**: VALOR, CHAVE.
   - Ex.: `<li v-for="(cor, i) in cores">{{ cor }}</li>`
+
+### 52. Identificando os Elementos no v-for
+
+- É muito interessante que ao usar um `v-for`, a propriedade `key` seja utilizada (principalmente quando a iteração renderiza elementos muito complexos). Isso "ajudará" o Vue a rastrear o elemento que deve ser atualizado.
+  - Veja mais na [documentação](https://br.vuejs.org/v2/guide/list.html#Maintaining-State).
