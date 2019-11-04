@@ -137,3 +137,24 @@
 ### 43. Renderização Condicional com v-if/v-else
 
 - A diretiva `v-else` só funcionará se o elemento exatamente anterior ao elemento com essa diretiva possuir um `v-if` ou um `v-else-if`.
+- Quando o `v-if` é utilizado, o elemento será (ou não) **removido** da página.
+  - Diferentemente do `v-show`, que apenas "esconde" aquele trecho de HTML.
+
+### 44. Usando v-if com Template
+
+- Uma dica bastante interessante para quando não for desejado incrementar nenhuma tag no HTML, mas é necessário englobar algum controle Vue em vários componentes de uma vez, é usar a tag `<template>` (disponível com HTML5). Isso permitirá que você aplique o controle que desejar e não criará nenhuma `<div>` extra, por exemplo.
+  - Ex.:
+
+```html
+<!-- Antes -->
+<div v-if="logado">
+    <p>Usuário Logado: {{ nome }}</p>
+    <p>Perfil: Admin</p>
+</div>
+
+<!-- Depois -->
+<template v-if="logado">
+    <p>Usuário Logado: {{ nome }}</p>
+    <p>Perfil: Admin</p>
+</template>
+```
