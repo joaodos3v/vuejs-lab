@@ -109,3 +109,11 @@
         }
     });
     ```
+
+### 31. SIntaxe Reduzida
+
+- Em projetos maiores, é interessante usar a escrita mais reduzida. Então:
+  - `v-on:` pode ser substituído por: `@`
+    - Ex.: `<button @click="somar">Somar</button>`
+  - `v-bind:` pode ser substituído por: `:`
+    - Ex.: `<input type="text" :value="contador">`
