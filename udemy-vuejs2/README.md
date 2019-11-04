@@ -131,3 +131,9 @@
 - Documentação Oficial - Dados Computados & Observadores: https://br.vuejs.org/v2/guide/computed.html
 
 - Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.org/v2/guide/class-and-style.html
+
+## Seção 3 - Usando Condicionais & Renderização de Listas
+
+### 43. Renderização Condicional com v-if/v-else
+
+- A diretiva `v-else` só funcionará se o elemento exatamente anterior ao elemento com essa diretiva possuir um `v-if` ou um `v-else-if`.
