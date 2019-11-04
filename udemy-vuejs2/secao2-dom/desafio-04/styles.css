@@ -14,6 +14,7 @@
 	width: 50px !important;
 }
 
+
 /* Tarefa 2 */
 .negrito {
 	font-weight: bold;
@@ -22,6 +23,16 @@
 .italico {
 	font-style: italic;
 }
+
+.perigo { /* Instrutor */
+	background-color: red;
+}
+
+.quadrado { /* Instrutor */
+	width: 100px;
+	height: 100px;
+}
+
 
 /* Tarefa 3 */
 .radius {
@@ -36,6 +47,7 @@
 	border: 5px solid black;
 }
 
+
 /* Tarefa 4 */
 .green {
 	padding: 10px;
@@ -44,4 +56,17 @@
 
 .altura {
 	height: 500px;
+}
+
+
+/* Tarefa 6 - Instrutor */
+.barra-progresso { 
+	height: 30px;
+	width: 500px;
+	border: 1px solid #000;
+}
+
+.progresso {
+	background-color: red;
+	height: 100%;
 }
