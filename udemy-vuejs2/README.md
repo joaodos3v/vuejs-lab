@@ -69,3 +69,43 @@
 - Essa técnica funciona como o binding em "duas direções" e engloba as técnicas do `v-bind` e do `v-on` numa única diretiva (`v-model`), pois o HTML atualiza os dados Javascript que são controlados pela VueInstance e o que for atualizado no Vue, gera impacto no HTML.
   - Quando realiza `v-bind`, ocorre o bind de uma única direção (do Javascript pro HTML).
   - Enquanto que usando o `v-on`, captura-se um evento que aconteceu no template e altera algo na VueInstance (do HTML pro Javascript).
+
+### 30. Monitorando as mudanças
+
+- Propriedades computadas (`computed: {}`) são síncronas, ou seja, **devem** retornar um valor quando são chamadas.
+  - Já com o `watch: {}`, que é assíncrono, você não terá uma propriedade computada e sim estará monitorando os valores de uma propriedade.
+    - Em resumo, `watch` deve ser usado quando você deseja monitorar mudanças em determinada variável e fazer alguma ação em resposta à essas mudanças.
+    - É útil nas situação de combobox Estado-Cidade (ao mudar o estado, recarrega a lista de cidades).
+    - Ex. de uso:
+
+    ```vuejs
+    <!-- Template -->
+    <div id="app">
+        <button v-on:click="aumentar">Aumentar</button>
+        <button v-on:click="diminuir">Diminuir</button>
+        <p>Contador: {{ contador }}</p>
+    </div>
+
+    <!-- Script -->
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+        },
+        watch: {
+            contador(novo, antigo) { // O nome do método deve ser EXATAMENTE igual ao nome da propriedade monitorada
+                setTimeout(() => {
+                    this.contador = 0;
+                }, 2000);
+            }
+        },
+        methods: {
+            aumentar() {
+                this.contador++;
+            },
+            diminuir() {
+                this.contador--;
+            }
+        }
+    });
+    ```
