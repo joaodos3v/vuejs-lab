@@ -122,15 +122,15 @@
 
 ### ENCERRAMENTO - SEÇÃO 2
 
-- Documentação Oficial - Introdução: https://br.vuejs.org/v2/guide/
+- Documentação Oficial - [Introdução](https://br.vuejs.org/v2/guide/)
 
-- Documentação Oficial - Sintaxe de Template: https://br.vuejs.org/v2/guide/syntax.html
+- Documentação Oficial - [Sintaxe de Template](https://br.vuejs.org/v2/guide/syntax.html)
 
-- Documentação Oficial - Manipulação de Eventos: https://br.vuejs.org/v2/guide/events.html
+- Documentação Oficial - [Manipulação de Eventos](https://br.vuejs.org/v2/guide/events.html)
 
-- Documentação Oficial - Dados Computados & Observadores: https://br.vuejs.org/v2/guide/computed.html
+- Documentação Oficial - [Dados Computados & Observadores](https://br.vuejs.org/v2/guide/computed.html)
 
-- Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.org/v2/guide/class-and-style.html
+- Documentação Oficial - [Interligações de Classe e Estilo](https://br.vuejs.org/v2/guide/class-and-style.html)
 
 ## Seção 3 - Usando Condicionais & Renderização de Listas
 
@@ -170,3 +170,9 @@
 
 - É muito interessante que ao usar um `v-for`, a propriedade `key` seja utilizada (principalmente quando a iteração renderiza elementos muito complexos). Isso "ajudará" o Vue a rastrear o elemento que deve ser atualizado.
   - Veja mais na [documentação](https://br.vuejs.org/v2/guide/list.html#Maintaining-State).
+
+### ENCERRAMENTO - SEÇÃO 3
+
+- Documentação Oficial - [Renderização Condicional](https://br.vuejs.org/v2/guide/conditional.html)
+
+- Documentação Oficial - [Renderização de Listas](https://br.vuejs.org/v2/guide/list.html)
