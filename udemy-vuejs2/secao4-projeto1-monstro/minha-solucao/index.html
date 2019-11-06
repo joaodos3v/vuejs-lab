@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>O Matador de Monstros - João Vitor Veronese Vieira</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Scores -->
+        <div class="panel scores">
+            <div class="player">
+                <h2>Jogador</h2>
+                <div class="progress-bar">
+                    <div v-if="playerLife >= 20" class="progress" :style="{width: `${playerLife}%`}"></div>
+                    <div v-else class="progress-danger" :style="{width: `${playerLife}%`}"></div>
+                </div>
+                <h4>{{ playerLife >= 0 ? playerLife : 0 }}%</h4>
+            </div>
+            <div class="player">
+                <h2>Monstro</h2>
+                <div class="progress-bar">
+                    <div v-if="monsterLife >= 20" class="progress" :style="{width: `${monsterLife}%`}"></div>
+                    <div v-else class="progress-danger" :style="{width: `${monsterLife}%`}"></div>
+                </div>
+                <h4>{{ monsterLife }}%</h4>
+            </div>
+        </div>
+
+        <!-- Result -->
+        <div v-if="finished" class="panel result">
+            <h3 :style="{color: result.color}">{{ result.text }}</h3>
+        </div>
+
+        <!-- Buttons -->
+        <div class="panel buttons">
+            <template v-if="!playing || finished">
+                <button @click="restart" class="start">INICIAR NOVO JOGO</button>
+            </template>
+            <template v-else>
+                <button @click="attack" class="attack">ATAQUE</button>
+                <button @click="specialAttack" class="special-attack">ATAQUE ESPECIAL</button>
+                <button @click="heal" class="heal">CURAR</button>
+                <button @click="restart" class="give-up">DESISTIR</button>
+            </template>
+        </div>
+
+        <!-- Logs -->
+        <div v-if="logs.length > 0" class="panel">
+            <div v-for="log in logs" class="log" :class="[{playerColor: log.player}, {monsterColor: log.monster}]">
+                <p>{{ log.text }}</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Global */
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    box-shadow: 1px #ccc;
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* App */
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel {
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.149);
+}
+
+
+/* Scores */
+.scores {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 250px;
+    border: 1px solid #000;
+}
+
+.progress {
+    background-color: #2c9e18;
+    height: 100%;
+}
+
+.progress-danger {
+    background-color: #bb0808;
+    height: 100%;
+}
+
+
+/* Result */
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.start {
+    background-color: #7204bb;
+}
+
+.attack {
+    background-color: #b12a12;
+}
+
+.special-attack {
+    background-color: #e09137;
+    color: #000000;
+}
+
+.heal {
+    background-color: #45a81e;
+}
+
+.give-up {
+    background-color: #c2b8b8;
+    color: #000000;
+}
+
+
+/* Logs */
+.log {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 5px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.playerColor {
+    background-color: #7642ca;
+}
+
+.monsterColor {
+    background-color: #e7515d;
+}
