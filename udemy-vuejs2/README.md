@@ -286,3 +286,9 @@
 - Uma dica pertinente à inclusão de arquivos (caminhos **absolutos** e **relativos**) é que, para evitar usar o caminho relativo ao arquivo atual, pode-se referenciar o caminho a partir da pasta `src` utilizando o prefixo `@`.
   - Ex.: **caminho relativo =>** import Footer from "./components/template/Footer";
   - Ex2.: **caminho absoluto =>** import Footer from "@/components/template/Footer";
+
+### ENCERRAMENTO - SEÇÃO 7
+
+- Documentação Oficial - [Componentização VueJS](https://br.vuejs.org/v2/guide/components.html)
+
+- Documentação Oficial - [Registro de Componentes](https://br.vuejs.org/v2/guide/components-registration.html)
