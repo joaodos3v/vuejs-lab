@@ -247,3 +247,8 @@
   - **Adicionar Plugins** 
     - `vue add @vue/nome-plugin` ou
     - Adicionar plugins de terceiros (o comando muda um pouco)
+
+### 93. Como Construir sua APP para Produção
+
+- O comando para criar a pasta `dist/` é: `npm run build`
+  - Feito isso, basta pegar essa pasta e colocar no servidor de produção desejado (Apache, nginx, Amazon, Heroku)
