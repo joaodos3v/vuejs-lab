@@ -267,3 +267,5 @@
 - É possível aprender mais sobre o método `render()` [nesse outro artigo na documentação oficial](https://br.vuejs.org/v2/guide/single-file-components.html)
 
 - Aqui está [tudo sobre o Vue CLI](https://cli.vuejs.org/)
+
+## Seção 7 - Introdução aos Componentes
