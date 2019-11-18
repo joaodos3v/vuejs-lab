@@ -177,7 +177,6 @@
 
 - Documentação Oficial - [Renderização de Listas](https://br.vuejs.org/v2/guide/list.html)
 
-
 ## Seção 5 - Entendendo a Instância Vue
 
 ### 70. Noções básicas sobre a Instância Vue
@@ -186,3 +185,14 @@
 - Duas perguntas importantes que serão respondidas na próxima aula:
   - *É possível utilizar duas instâncias do Vue.js, operando juntas, na mesma página?*
   - *É possível acessar os dados do Vue.js externamente?*
+
+### 71. Usando Múltiplas Instância Vue
+
+> É possível utilizar duas instâncias do Vue.js, operando juntas, na mesma página?
+
+- **Sim**, é possível.
+  - No entanto, exceto em raras situações, isso não vai acontecer (não é indicado).
+  - Quais são essas situações?
+    - Em situações que uma página foi construída com outro framework;
+    - Ou usando outra tecnologia (PHP, Python, Java.. | Server-Side)
+  - Porém, em aplicações criadas com Vue.js desde o início, o ideal é utilizar componentes!
