@@ -68,3 +68,44 @@ html {
 .result .lose {
     color: red;
 }
+
+
+
+/* Área dos Botões (Controle do Jogo) */
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.new-game {
+    background-color: #4253AF;
+    color: #FFF;
+}
+
+.attack {
+    background-color: #E51C23;
+    color: #FFF;
+}
+
+.especial-attack {
+    background-color: #FF9800;
+    color: #000;
+}
+
+.heal {
+    background-color: #259B24;
+    color: #FFF;
+}
+
+.give-up {
+    background-color: #BBB;
+    color: #000;
+}
