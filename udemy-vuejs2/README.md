@@ -225,3 +225,12 @@
   - `beforeDestroy()`
   - `destroyed()`
     - **Métodos chamados apenas se a instância de Vue for "destruída"**
+
+## Seção 6 - Fluxo de Desenvolvimento "Real" usando Vue CLI
+
+### 87. Por que Precisamos de um Servidor Web?
+
+- Porque VueJS executa no cliente, só que sendo servido por um servidor (`file://` não é o protocolo `http://`)
+- Para testar a aplicação em um cenário mais realista
+- Porque requisições assíncronas (AJAX) precisam de um servidor
+- A boa notícia é: **o próprio Vue CLI tem um servidor embutido baseado em Node**
