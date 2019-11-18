@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import Menu from "./Menu";
-import Toolbar from "./Toolbar";
-import Carousel from "./Carousel";
-import Footer from "./Footer";
+import Menu from "./components/template/Menu";
+import Toolbar from "./components/template/Toolbar";
+import Carousel from "./components/widgets/Carousel";
+import Footer from "@/components/template/Footer";
 
 export default {
 	components: {

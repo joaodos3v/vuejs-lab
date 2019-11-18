@@ -275,3 +275,14 @@
 - A propriedade `scoped` que pode ser adicionada à tag `<style>` em um componente é bastante útil, pois impedirá que esse estilo seja aplicado aos demais componentes.
   - Quando um `<style>` em um componente-pai é marcado com `scoped`, ele não irá transmitir seu estilo indefinidamente para os componentes-filhos do seu componente-filho direto.
     - *No entanto*, ele aplicará seu estilo para o elemento root do seu componente-filho direto (uma div, por exemplo).
+
+### 109. Oranizando os Componentes em Pastas
+
+- Para organizar o projeto, muito vai depender da opinião do desenvolvedor. Mas, como via de regra, geralmente cria-se a pasta `components` dentro da pasta `src` para armazenar os **componentes**.
+  - Com isso, dentro dessa pasta, podem ser criados subdiretórios que armazenarão os componentes com base em sua responsabilidade dentro do sistema.
+    - Ex.: a pasta `template` pode ser criada para armazenar componentes que são pertinentes ao layout da aplicação;
+    - Ex2.: já a pasta `user` pode ser criada para armazenar componentes que se referem somente às páginas que possuem o conteúdo vinculado à entidade usuário.
+  - Também dentro da pasta `src`, costuma-se criar a pasta `views`, que *também é* populada por componentes, mas que possuem um nível de granularidade menor (geralmente representarão páginas completas do sistema, ou seja, um conjunto de componentes).
+- Uma dica pertinente à inclusão de arquivos (caminhos **absolutos** e **relativos**) é que, para evitar usar o caminho relativo ao arquivo atual, pode-se referenciar o caminho a partir da pasta `src` utilizando o prefixo `@`.
+  - Ex.: **caminho relativo =>** import Footer from "./components/template/Footer";
+  - Ex2.: **caminho absoluto =>** import Footer from "@/components/template/Footer";
