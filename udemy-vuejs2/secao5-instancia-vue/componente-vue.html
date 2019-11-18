@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <!-- Exemplo 1 -->
+    <!-- <comp></comp> -->
+
+    <!-- Exemplo 2 -->
+    <!-- <div class="comp">1</div>
+    <div class="comp">2</div>
+    <div class="comp">3</div>
+    <div class="comp">4</div> -->
+
+    <comp></comp>
+    <comp></comp>
+    <comp></comp>
+</div>
+
+<script>
+    // Função utilizada para registrar um componente de forma global dentro do Vue
+    Vue.component("comp", {
+        template: `
+            <div>
+                <h1>{{ aula }}</h1>
+                <h2>{{ modulo }}</h2>
+                <button @click="alterarAula">Alterar Aula</button>
+                <button @click="alterarModulo">Alterar Módulo</button>
+            </div>
+        `,
+        data: function() {
+            return {
+                aula: 'Aula: Montando Instância Vue',
+                modulo: 'Módulo: Instância Vue'
+            }
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '#';
+            },
+            alterarModulo() {
+                this.modulo += '#';
+            }
+        }
+    });
+
+    const vm = new Vue({
+        // Exemplo 1
+        // el: "comp",
+
+        // Exemplo 2
+        // el: ".comp",
+
+        el: "#app",
+    });
+</script>
