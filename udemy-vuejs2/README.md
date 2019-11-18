@@ -292,3 +292,10 @@
 - Documentação Oficial - [Componentização VueJS](https://br.vuejs.org/v2/guide/components.html)
 
 - Documentação Oficial - [Registro de Componentes](https://br.vuejs.org/v2/guide/components-registration.html)
+
+## Seção 8 - Comunicação Entre Componentes
+
+### 115. Comunicação Direta com Props #01
+
+- Basicamente, `props` é o jeito mais fácil e rápido para trocar informações entre componentes.
+  - Utilizando essa tática, basta informar no componente-filho (que vai **receber** as props) quais propriedades ele espera e no componente-pai (que vai **enviar** as props) quais são as propriedades que ele enviará, juntamente com os valores.
