@@ -19,6 +19,7 @@ new Vue({
             this.running = true;
             this.playerLife = 100;
             this.monsterLife = 100;
+            this.logs = [];
         },
         attack(especial) {
             this.hurt("monsterLife", 5, 10, especial, "Jogador", "Monstro", "player");
@@ -30,8 +31,7 @@ new Vue({
             const plus = especial ? 5 : 0;
             const hurt = this.getRandom(min + plus, max + plus);
             this[prop] = Math.max(this[prop] - hurt, 0);
-
-            this.registerLog(`${source} atiniu ${target} com ${hurt}`, cls);
+            this.registerLog(`${source} atingiu ${target} com ${hurt}`, cls);
         },
         healAndHurt() {
             this.heal(10, 15); // Tem que ser primeiro, pois se não ele pode morrer antes de ser curado
@@ -40,6 +40,7 @@ new Vue({
         heal(min, max) {
             const heal = this.getRandom(min, max);
             this.playerLife = Math.min(this.playerLife + heal, 100);
+            this.registerLog(`Jogador ganhou força de ${heal}`, "player");
         },
         getRandom(min, max) {
             const value = Math.random() * (max - min) + min;
