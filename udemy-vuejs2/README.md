@@ -211,6 +211,17 @@
 - `$el` = *toda a estruta HTML definida a partir do template (a versão que realmente está sendo usada na DOM)*
 - `$data` = *todos os dados que você passou na construção da sua instância e que são "observados" pelo Vue*
 
-### 76. Colocando $refs e Usando nos Templates
+### 82. O Ciclo de Vida da Instância Vue #01
 
--
+- Os principais métodos do *life cycle Vue* são:
+  - `beforeCreate()`
+  - `created()`
+  - `beforeMount()`
+  - `mounted()`
+    - **Aqui o ciclo de vida de ínicio da instância/componente foi encerrado**
+  - `beforeUpdate()`
+  - `updated()`
+    - **Esses dois métodos são chamados toda vez que existe diferença entre a VirtualDOM e a DOM**
+  - `beforeDestroy()`
+  - `destroyed()`
+    - **Métodos chamados apenas se a instância de Vue for "destruída"**
