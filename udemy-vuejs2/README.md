@@ -205,3 +205,8 @@
   - Porém, não existe nenhuma situação em que essa seja a melhor solução.
   - Esse tipo de acesso externo só é interessante para acessar os dados com outra tecnologia/framework, onde seja necessário capturar os dados da instância do Vue.js.
     - Além disso, caso isso seja necessário, deve-se tomar cuidado para não alterar uma propriedade que está sob o controle do Vue.js e modificar seu comportamento.
+
+### 75. Uma Análise Mais Detalhada de $el e $data
+
+- `$el` = *toda a estruta HTML definida a partir do template (a versão que realmente está sendo usada na DOM)*
+- `$data` = *todos os dados que você passou na construção da sua instância e que são "observados" pelo Vue*
