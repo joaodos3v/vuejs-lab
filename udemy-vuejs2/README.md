@@ -210,3 +210,7 @@
 
 - `$el` = *toda a estruta HTML definida a partir do template (a versão que realmente está sendo usada na DOM)*
 - `$data` = *todos os dados que você passou na construção da sua instância e que são "observados" pelo Vue*
+
+### 76. Colocando $refs e Usando nos Templates
+
+-
