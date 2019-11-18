@@ -176,3 +176,13 @@
 - Documentação Oficial - [Renderização Condicional](https://br.vuejs.org/v2/guide/conditional.html)
 
 - Documentação Oficial - [Renderização de Listas](https://br.vuejs.org/v2/guide/list.html)
+
+
+## Seção 5 - Entendendo a Instância Vue
+
+### 70. Noções básicas sobre a Instância Vue
+
+- [Documentação Completa sobre a Instância Vue](https://br.vuejs.org/v2/guide/instance.html)
+- Duas perguntas importantes que serão respondidas na próxima aula:
+  - *É possível utilizar duas instâncias do Vue.js, operando juntas, na mesma página?*
+  - *É possível acessar os dados do Vue.js externamente?*
