@@ -196,3 +196,12 @@
     - Em situações que uma página foi construída com outro framework;
     - Ou usando outra tecnologia (PHP, Python, Java.. | Server-Side)
   - Porém, em aplicações criadas com Vue.js desde o início, o ideal é utilizar componentes!
+
+### 72. Acessando a Instância Vue Externamente
+
+> É possível acessar ou modificar os dados de uma instância Vue.js externamente (seja a partir do Vanilla JS ou de outra instância do Vue.js)?
+
+- **Sim**, é possível.
+  - Porém, não existe nenhuma situação em que essa seja a melhor solução.
+  - Esse tipo de acesso externo só é interessante para acessar os dados com outra tecnologia/framework, onde seja necessário capturar os dados da instância do Vue.js.
+    - Além disso, caso isso seja necessário, deve-se tomar cuidado para não alterar uma propriedade que está sob o controle do Vue.js e modificar seu comportamento.
