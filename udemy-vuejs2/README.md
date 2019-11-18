@@ -252,3 +252,18 @@
 
 - O comando para criar a pasta `dist/` é: `npm run build`
   - Feito isso, basta pegar essa pasta e colocar no servidor de produção desejado (Apache, nginx, Amazon, Heroku)
+
+### 95. Adicionando Plugins ao Projeto
+
+- A nomenclatura de plugins oficiais suportados pelo Vue CLI começa com: `@vue/cli-plugin-<NOME>`
+  - Já plugins de terceiros, possivelmente terão sua nomenclatura como: `vue-cli-plugin-<NOME>`
+  - Por isso, para adicionar um plugin ao Vue, geralmente utiliza-se apenas o sufixo final (pois o prefixo é padrão):
+    - Ex.: `vue add electron-builder` **resultará em =>** `vue add vue-cli-plugin-electron-builder`
+
+### 96. Mais sobre Arquivos ".vue" e o CLI
+
+- É possível aprender mais sobre o arquivo ".vue" [nesse artigo da documentação oficial](https://br.vuejs.org/v2/guide/single-file-components.html)
+
+- É possível aprender mais sobre o método `render()` [nesse outro artigo na documentação oficial](https://br.vuejs.org/v2/guide/single-file-components.html)
+
+- Aqui está [tudo sobre o Vue CLI](https://cli.vuejs.org/)
