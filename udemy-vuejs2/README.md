@@ -234,3 +234,16 @@
 - Para testar a aplicação em um cenário mais realista
 - Porque requisições assíncronas (AJAX) precisam de um servidor
 - A boa notícia é: **o próprio Vue CLI tem um servidor embutido baseado em Node**
+
+### 89. Usando o Vue CLI para criar Projetos
+
+- Uma estruta básica do fluxo de desenvolvimento com o Vue CLI é:
+  - `vue create`
+    - **Usar Preset** ou
+    - **Configuração Customizada**
+      - Adicionar Plugin (PWA, ESLint, SASS...)
+      - Salvar como novo Preset?
+  - **Desenvolvimento & Build**
+  - **Adicionar Plugins** 
+    - `vue add @vue/nome-plugin` ou
+    - Adicionar plugins de terceiros (o comando muda um pouco)
