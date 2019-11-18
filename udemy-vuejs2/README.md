@@ -269,3 +269,9 @@
 - Aqui está [tudo sobre o Vue CLI](https://cli.vuejs.org/)
 
 ## Seção 7 - Introdução aos Componentes
+
+### 106. Usando CSS com Escopo de Componente
+
+- A propriedade `scoped` que pode ser adicionada à tag `<style>` em um componente é bastante útil, pois impedirá que esse estilo seja aplicado aos demais componentes.
+  - Quando um `<style>` em um componente-pai é marcado com `scoped`, ele não irá transmitir seu estilo indefinidamente para os componentes-filhos do seu componente-filho direto.
+    - *No entanto*, ele aplicará seu estilo para o elemento root do seu componente-filho direto (uma div, por exemplo).
