@@ -28,10 +28,12 @@
                 <div>{{ monsterLife }}%</div>
             </div>
         </div>
+
         <div v-if="hasResult" class="panel result">
             <div v-if="monsterLife == 0" class="win">Você ganhou!!! :)</div>
             <div v-else class="lose">Você perdeu! :(</div>
         </div>
+
         <div class="panel buttons">
             <template v-if="running">
                 <button @click="attack(false)"
@@ -46,7 +48,9 @@
             <button v-else @click="startGame"
                 class="btn new-game">Iniciar Jogo</button>
         </div>
-        <div class="panel logs"></div>
+
+        <div v-if="logs.length" 
+            class="panel logs"></div>
     </div>
     <script src="app.js"></script>
 </body>
