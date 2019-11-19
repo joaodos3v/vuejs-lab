@@ -13,9 +13,7 @@
                 @nomeMudou="nome = $event"
                 :reiniciarFn="reiniciarNome" />
             <app-usuario-editar 
-                :idade="idade"
-                @idadeMudou="idade = $event"
-                :alterarIdadeFn="exemploCallbackMudarComponenteIrmao" />
+                :idade="idade" />
         </div>
     </div>
 </template>
@@ -40,9 +38,6 @@ export default {
         },
         reiniciarNome() {
             this.nome = "Pedro";
-        },
-        exemploCallbackMudarComponenteIrmao() {
-            this.idade = 50;
         }
     }
 }
