@@ -299,3 +299,8 @@
 
 - Basicamente, `props` é o jeito mais fácil e rápido para trocar informações entre componentes.
   - Utilizando essa tática, basta informar no componente-filho (que vai **receber** as props) quais propriedades ele espera e no componente-pai (que vai **enviar** as props) quais são as propriedades que ele enviará, juntamente com os valores.
+
+### 117. Nome das Propriedades são Case-Sensitive
+
+- Vale lembrar que o uso das props (diferentemente da DOM, que é **case-insensitive**) respeita o **case-sensitive**.
+  - Então, ao criar um componente e enviar  `<componente :nomePropriedade="exemplo" />`, será necessário indicar no componente que espera essa property que o valor esperado é `nomePropriedade`.
