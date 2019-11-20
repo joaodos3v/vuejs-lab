@@ -316,3 +316,8 @@
 ### 134. Configurando Projeto do Módulo
 
 - Um bom site para criar gradientes é o [uiGradients](https://uigradients.com/).
+
+### 137. Como o Conteúdo do Slot é Estilizado
+
+- Ao utilizar o componente do Vue `<slot>`, apesar de usar um `<style scoped>`, por exemplo, tanto o componente-pai (que está "enviando o HTML") como o compnente-filho (que irá "receber e renderizar o HTML") terão "direito" de aplicar classes de estilos no elemento.
+  - Isso quer dizer que deve-se tomar cuidado, pois conflitos de estilização podem ocorrer nessas situações.
