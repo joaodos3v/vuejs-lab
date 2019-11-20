@@ -304,3 +304,9 @@
 
 - Vale lembrar que o uso das props (diferentemente da DOM, que é **case-insensitive**) respeita o **case-sensitive**.
   - Então, ao criar um componente e enviar  `<componente :nomePropriedade="exemplo" />`, será necessário indicar no componente que espera essa property que o valor esperado é `nomePropriedade`.
+
+### ENCERRAMENTO - SEÇÃO 8
+
+- Documentação Oficial - [Props](https://br.vuejs.org/v2/guide/components.html#Passando-Dados-aos-Filhos-com-Props)
+
+- Documentação Oficial - [Eventos Personalizados](https://br.vuejs.org/v2/guide/components.html#Enviando-Mensagens-ao-Pai-com-Eventos)
