@@ -328,3 +328,9 @@
   - Essa tag permite criar os chamados **componentes dinâmicos**, que possibilitam renderizar um componente definido dinamicamente através da instância VueJS.
   - Esse tipo de componente é bastante utilizado em conjunto com seus métodos de ciclo de vida (os principais são `created`, `destroyed`, `activated`, `deactivated`).
     - Vale ressaltar que `activated` e `deactivated` só serão chamados quando o componente dinâmico estiver circundado por uma tag `<keep-alive>`.
+
+### ENCERRAMENTO - SEÇÃO 9
+
+- Documentação Oficial - [Slots](https://br.vuejs.org/v2/guide/components.html#Distribuicao-de-Conteudo-com-Slots)
+
+- Documentação Oficial - [Componentes Dinâmicos](https://br.vuejs.org/v2/guide/components.html#Componentes-Dinamicos)
