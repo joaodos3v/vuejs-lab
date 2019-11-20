@@ -1,12 +1,21 @@
 <template>
 	<div id="app">
 		<h1>Tarefas</h1>
+		<PercentageCompleted />
+		<New />
+		<List />
 	</div>
 </template>
 
 <script>
-export default {
+import PercentageCompleted from "@/components/task/PercentageCompleted";
+import New from "@/components/task/New";
+import List from "@/components/task/List";
 
+export default {
+	components: {
+		List, New, PercentageCompleted
+	},
 }
 </script>
 
