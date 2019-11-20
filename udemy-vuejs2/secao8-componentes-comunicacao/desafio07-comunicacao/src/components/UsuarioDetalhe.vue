@@ -10,11 +10,19 @@
 </template>
 
 <script>
+import Bus from "@/bus.js";
+
 export default {
     data() {
         return {
             usuario: null
         }
+    },
+
+    created() {
+        Bus.onUserChanges(user => {
+            this.usuario = user;
+        });
     }
 }
 </script>

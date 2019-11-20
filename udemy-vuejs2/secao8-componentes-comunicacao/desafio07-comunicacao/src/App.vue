@@ -11,7 +11,9 @@ import UsuarioDetalhe from './components/UsuarioDetalhe.vue'
 
 export default {
 	name: "app",
+
 	components: { UsuarioLista, UsuarioDetalhe },
+	
     data() {
         return {
             usuarios: [
