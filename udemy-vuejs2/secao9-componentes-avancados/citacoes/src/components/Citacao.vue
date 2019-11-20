@@ -1,12 +1,12 @@
 <template>
     <div class="citacao">
-        
+        <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
 
