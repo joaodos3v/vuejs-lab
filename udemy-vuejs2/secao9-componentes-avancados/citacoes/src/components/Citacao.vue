@@ -8,12 +8,7 @@
 
 <script>
 export default {
-    created() {
-        console.log('created component...');
-    },
-    destroyed() {
-        console.log('destroyed component...');
-    }
+    
 }
 </script>
 

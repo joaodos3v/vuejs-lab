@@ -321,3 +321,10 @@
 
 - Ao utilizar o componente do Vue `<slot>`, apesar de usar um `<style scoped>`, por exemplo, tanto o componente-pai (que está "enviando o HTML") como o compnente-filho (que irá "receber e renderizar o HTML") terão "direito" de aplicar classes de estilos no elemento.
   - Isso quer dizer que deve-se tomar cuidado, pois conflitos de estilização podem ocorrer nessas situações.
+
+### 144. Método de Ciclo de Vida de um Componente Dinâmico
+
+- Além dos slots, é possível utilizar a tag `<component>`.
+  - Essa tag permite criar os chamados **componentes dinâmicos**, que possibilitam renderizar um componente definido dinamicamente através da instância VueJS.
+  - Esse tipo de componente é bastante utilizado em conjunto com seus métodos de ciclo de vida (os principais são `created`, `destroyed`, `activated`, `deactivated`).
+    - Vale ressaltar que `activated` e `deactivated` só serão chamados quando o componente dinâmico estiver circundado por uma tag `<keep-alive>`.

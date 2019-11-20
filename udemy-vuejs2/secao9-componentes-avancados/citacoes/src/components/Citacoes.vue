@@ -43,6 +43,21 @@ export default {
         indice() {
             return Math.abs(this.numero % 3)
         }
+    },
+
+    created() {
+        console.log('created component...');
+    },
+    destroyed() {
+        console.log('destroyed component...');
+    },
+
+    // Os dois métodos de ciclo de vida abaixo funcionam apenas se o componente for circundado por <keep-alive>
+    activated() {
+        console.log('Citacoes activated');
+    },
+    deactivated() {
+        console.log('Citacoes deactivated');
     }
 }
 </script>
