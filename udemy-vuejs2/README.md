@@ -310,3 +310,9 @@
 - Documentação Oficial - [Props](https://br.vuejs.org/v2/guide/components.html#Passando-Dados-aos-Filhos-com-Props)
 
 - Documentação Oficial - [Eventos Personalizados](https://br.vuejs.org/v2/guide/components.html#Enviando-Mensagens-ao-Pai-com-Eventos)
+
+## Seção 9 - Uso Avançado de Componentes
+
+### 134. Configurando Projeto do Módulo
+
+- Um bom site para criar gradientes é o [uiGradients](https://uigradients.com/).
