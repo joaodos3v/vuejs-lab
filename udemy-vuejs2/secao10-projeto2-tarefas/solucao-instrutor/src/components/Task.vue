@@ -1,7 +1,10 @@
 <template>
-  <div class="task" :class="stateClass">
-      <span @click="$emit('taskDeleted', task)" class="close">x</span>
+  <div @click="$emit('taskStateChanged', task)" class="task" :class="stateClass">
+      
+      <!-- Nesse caso, o stop é usado para que o evento de "click" não seja propagado e o eventBus 'taskStateChanged' não seja chamado -->
+      <span @click.stop="$emit('taskDeleted', task)" class="close">x</span>
       <p>{{ task.name }}</p>
+      
   </div>
 </template>
 
