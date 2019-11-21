@@ -334,3 +334,36 @@
 - Documentação Oficial - [Slots](https://br.vuejs.org/v2/guide/components.html#Distribuicao-de-Conteudo-com-Slots)
 
 - Documentação Oficial - [Componentes Dinâmicos](https://br.vuejs.org/v2/guide/components.html#Componentes-Dinamicos)
+
+## Seção 10 - Projeto #02 - Tarefas (TODO)
+
+### 159. Usando Local Storage
+
+- A propriedade `watch`, por **default**, observa apenas "superficialmente" os dados.
+  - Por exemplo, ao *observar* um array, ela irá registrar apenas mudanças na quantia de elementos (remover, adicionar) ou na sua ordem. No entanto, se o dado com o qual se está trabalhando for um array de objetos, possivelmente você irá desejar observar alterações nas propriedades dos objetos também.
+    - Para que isso seja possível, o Vue.js traz por padrão uma forma: enviar uma configuração a mais no momento de criação do `watch`.
+
+> Exemplo Normal (superficial):
+
+```javascript
+watch: {
+  dado() {
+    // esse método só seria invocado quando mudanças "principais" fossem detectadas no array (adicionar, excluir)
+    // aqui você poderia escrever qualquer código
+  }
+}
+```
+
+> Exemplo Citado (observando com "profundidade"):
+
+```javascript
+watch: {
+  dado: {
+    deep: true,
+    handler() {
+      // esse método será invocado quando QUALQUER mudança for detectada no array (adicionar, excluir, modificar objetos)
+      // aqui você poderia escrever qualquer código
+    }
+  }
+}
+```
