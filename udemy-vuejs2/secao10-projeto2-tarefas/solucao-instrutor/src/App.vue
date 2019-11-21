@@ -1,23 +1,35 @@
 <template>
 	<div id="app">
 		<h1>Tarefas</h1>
+		<TasksProgress :progress="progress" />
 		<NewTask @taskAdded="addTask" />
 		<TaskGrid @taskDeleted="deleteTask" @taskStateChanged="toggleTaskState" :tasks="tasks" />
 	</div>
 </template>
 
 <script>
+import TasksProgress from '@/components/TasksProgress';
 import TaskGrid from '@/components/TaskGrid';
 import NewTask from '@/components/NewTask';
 
 export default {
 	components: {
-		NewTask, TaskGrid
+		TasksProgress, NewTask, TaskGrid
 	},
 
 	data() {
 		return {
 			tasks: []
+		}
+	},
+
+	computed: {
+		progress() {
+			const total = this.tasks.length;
+			const done = this.tasks.filter(t => !t.pending).length;
+
+			// Garante que se não tiver tarefas, não retorna um NaN (retorna 0)
+			return Math.round(done / total * 100) || 0;
 		}
 	},
 
