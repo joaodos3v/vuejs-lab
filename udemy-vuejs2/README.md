@@ -367,3 +367,14 @@ watch: {
   }
 }
 ```
+
+## Seção 11 - Formulários
+
+### 166. Modificar Entrada de Usuário com Modificadores de Input
+
+- Existem **3** modificadores de input que podem ser utilizados junto com a diretiva `v-model`:
+  - `lazy` - é utilizado para evitar que o Vue.js faça o *two-way data binding* à cada tecla que o usuário digitar
+    - Com isso, ele se preocupará em atualizar tanto o dado da instância Vue quando da view apenas quando o usuário **"sair do input"** (tiver finalizado sua interação)
+  - `trim` - remove todos os espaços em branco no início e no fim do campo
+  - `number` - o Vue.js se encarrega de converter o valor digitado no campo para número (através do `parseFloat()`) antes de "disponibilizar" o valor para ser utilizado
+    - Ele, por si só, não faz validação nenhuma; apenas converte para número caso a string do campo referenciado possua um valor válido
