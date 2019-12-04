@@ -378,3 +378,9 @@ watch: {
   - `trim` - remove todos os espaços em branco no início e no fim do campo
   - `number` - o Vue.js se encarrega de converter o valor digitado no campo para número (através do `parseFloat()`) antes de "disponibilizar" o valor para ser utilizado
     - Ele, por si só, não faz validação nenhuma; apenas converte para número caso a string do campo referenciado possua um valor válido
+
+### 168. Usando Checkboxes e Salvando os Dados em um Array
+
+- Com Vue.js, é muito fácil utilizar a estrutura de um checkbox, por exemplo.
+- Basta criar um array na sua estrutura de dados e atribuir esse array no v-model de cada input do tipo checkbox.
+  - Automaticamente o Vue irá tratar essa situação e adicionar o valor armazenado no atributo `value` para o seu array.
