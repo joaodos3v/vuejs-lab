@@ -368,7 +368,7 @@ watch: {
 }
 ```
 
-## Seção 11 - Formulários
+## Seção 11 - Manipulando Entrada de Usuário com Formulários
 
 ### 166. Modificar Entrada de Usuário com Modificadores de Input
 
@@ -400,7 +400,7 @@ watch: {
 
 - Documentação Oficial - [Formulário](https://br.vuejs.org/v2/guide/forms.html)
 
-## Seção 12 - Diretivas
+## Seção 12 - Usando e Criando Diretivas
 
 ### 178. Entendendo Diretivas
 
@@ -428,3 +428,12 @@ watch: {
   - É possível passar **um único argumento**;
   - É possível passar **vários modificadores**;
   - É possível passar **um único valor** (mas que pode ser um objeto com várias propriedades).
+
+## Seção 13 - Melhorando sua App com Filtros e Mixins
+
+### 192. Introdução do Módulo
+
+- **Filtros são:** são transformações que podemos fazer sob os valores (assim como as `computed properties`).
+  - Em algumas situações, os filtros são mais práticas que as propriedades computadas. Mas, geralmente, serão menos performáticos.
+- **Mixins são:** formas e técnicas de reuso baseadas em composição.
+  - Basicamente, você consegue reutilizar código sem, necessariamente, repetí-lo.
