@@ -437,3 +437,9 @@ watch: {
   - Em algumas situações, os filtros são mais práticas que as propriedades computadas. Mas, geralmente, serão menos performáticos.
 - **Mixins são:** formas e técnicas de reuso baseadas em composição.
   - Basicamente, você consegue reutilizar código sem, necessariamente, repetí-lo.
+
+### 195. Filtro & v-bind
+
+- Os dois locais onde é possível utilizar filtros são dentro da renderização (`Double Mustache -> {{}}`) ou dentro do `v-bind -> :`.
+  - Geralmente, esse tipo de estratégia que é muito fácil e prática é utilizada para conversões e mudanças em textos simples, onde não há uma carga muito grande de processamento.
+  - Caso seja necessário um filtro mais robusto, que preciso de performance otimizada, o ideal é utilizar `computed properties`.
