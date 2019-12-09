@@ -423,7 +423,7 @@ watch: {
 ### 181. Passando Argumento para Diretiva personalizada
 
 - A **anatomia** (sintaxe) de uma diretiva é a seguinte:
-  - `v-<nomeDaDiretiva>:argumentos.modificador1.modificador2="valor"`
+  - `v-<nomeDaDiretiva>:argumento.modificador1.modificador2="valor"`
 - Ou seja:
   - É possível passar **um único argumento**;
   - É possível passar **vários modificadores**;
