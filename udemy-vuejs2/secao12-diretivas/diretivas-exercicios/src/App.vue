@@ -7,6 +7,9 @@
 		<hr>
 		<p v-destaque="'blue'">Usando diretiva personalizada!</p>
 		<p v-destaque="cor">Usando diretiva personalizada!</p>
+		<hr>
+		<p v-destaque:fundo="'lightblue'">Usando diretiva personalizada!</p>
+		<p v-destaque="cor">Usando diretiva personalizada!</p>
 	</div>
 </template>
 

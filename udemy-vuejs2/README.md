@@ -112,7 +112,7 @@
     });
     ```
 
-### 31. SIntaxe Reduzida
+### 31. Sintaxe Reduzida
 
 - Em projetos maiores, é interessante usar a escrita mais reduzida. Então:
   - `v-on:` pode ser substituído por: `@`
@@ -419,3 +419,12 @@ watch: {
     - A principal diferença para o anterior é que este garante que os nós-filhos já foram atualizados.
   - **unbind(el, binding, vnode):** quando a diretiva é desvinculada do elemento
 - Leia mais sobre [diretivas aqui](https://br.vuejs.org/v2/guide/custom-directive.html).
+
+### 181. Passando Argumento para Diretiva personalizada
+
+- A **anatomia** (sintaxe) de uma diretiva é a seguinte:
+  - `v-<nomeDaDiretiva>:argumentos.modificador1.modificador2="valor"`
+- Ou seja:
+  - É possível passar **um único argumento**;
+  - É possível passar **vários modificadores**;
+  - É possível passar **um único valor** (mas que pode ser um objeto com várias propriedades).
