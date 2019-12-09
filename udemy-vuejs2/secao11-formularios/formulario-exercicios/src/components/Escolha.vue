@@ -2,8 +2,7 @@
     <div class="escolha"
         @click="$emit('input', !value)"
         :class="{ligado: value, desligado: !value}">
-        <div v-if="value" class="botao"></div>
-        <div v-else class="botao"></div>
+        <div class="botao"></div>
     </div>
 </template>
 
