@@ -449,3 +449,9 @@ watch: {
 - `Mixins` nada mais são do que uma forma elegante de "misturar" componentes.
   - Ou seja, se, de alguma forma, for necessário ter os dados, métodos, *watchers*, propriedades computadas ou filtros de outro componentes, por exemplo, ao invés de copiar e colar todo o código, é possível utilizar a propriedade `mixins: []`.
 - Vale ressaltar, por exemplo, que caso os métodos que seriam misturados ou mesmo os dados tenham um conflito de nomes com as propriedades do componente atual, as propriedades do **componente** serão mantidas (terão prioridade).
+
+### 198. Criando um Mixin Global (Caso Especial!)
+
+- Também é possível criar um `mixin` global. No entanto, deve-se ter um certo cuidado ao utilizá-lo (bem mais do que o local).
+  - Isso porque ele será executado em **todos** os componentes.
+  - Além disso, vale ressaltar que, caso um método de ciclo de vida seja utilizado dentro de um `mixin`, ele será executado tanto para o `mixin` quanto para o componente (isto é, será chamado 2x e a performance será prejudicada).

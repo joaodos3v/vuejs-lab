@@ -41,7 +41,11 @@ export default {
 		return {
 			cpfDoAluno: "60070080090",
 		};
-	}
+	},
+
+  created() {
+    window.console.log("Created - app");
+  }
 }
 </script>
 
