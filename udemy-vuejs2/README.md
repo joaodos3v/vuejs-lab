@@ -396,6 +396,13 @@ watch: {
   - Tratar o valor recebido através da `prop "value()"`;
   - Emitir (`$emit`) eventos do tipo `input` quando as `props` forem alteradas.
 
-### ENCERRAMENTO - SEÇÃO 10
+### ENCERRAMENTO - SEÇÃO 11
 
 - Documentação Oficial - [Formulário](https://br.vuejs.org/v2/guide/forms.html)
+
+## Seção 12 - Diretivas
+
+### 178. Entendendo Diretivas
+
+- Como já citado neste documento, a diretiva `v-html` disponível no Vue.js deve ser usada com bastante cuidado!
+  - Isso porque ela é perfeita para ataques de [Cross Site Scripting (XSS)](https://pt.wikipedia.org/wiki/Cross-site_scripting).
