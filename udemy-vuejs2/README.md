@@ -395,3 +395,7 @@ watch: {
 - Para implementar um `v-model` customizado em componentes próprios, ou seja, fazer com que o componente que você criou suporte a diretiva `v-model`, a base é:
   - Tratar o valor recebido através da `prop "value()"`;
   - Emitir (`$emit`) eventos do tipo `input` quando as `props` forem alteradas.
+
+### ENCERRAMENTO - SEÇÃO 10
+
+- Documentação Oficial - [Formulário](https://br.vuejs.org/v2/guide/forms.html)
