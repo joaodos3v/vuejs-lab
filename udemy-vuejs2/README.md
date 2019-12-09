@@ -406,3 +406,16 @@ watch: {
 
 - Como já citado neste documento, a diretiva `v-html` disponível no Vue.js deve ser usada com bastante cuidado!
   - Isso porque ela é perfeita para ataques de [Cross Site Scripting (XSS)](https://pt.wikipedia.org/wiki/Cross-site_scripting).
+
+### 179. Como a Diretiva Funciona - Funções Gatilho (Hooks)
+
+- Os "métodos gatilho" (ou métodos de ciclo de vida de uma diretiva - *hooks*) são 5:
+  - **bind(el, binding, vnode):** quando a diretiva é interligada com o elemento.
+    - É chamado uma única vez
+    - O único valor que deve ser alterado é o `el`. Os demais devem ser *readonly*.
+  - **inserted(el, binding, vnode):** elemento inserido no nó pai
+  - **update(el, binding, vnode, oldVNode):** quando o componente é atualizado (antes filhos)
+  - **componentUpdated(el, binding, vnode, oldVNode):** quando o componente é atualizado (depois filhos)
+    - A principal diferença para o anterior é que este garante que os nós-filhos já foram atualizados.
+  - **unbind(el, binding, vnode):** quando a diretiva é desvinculada do elemento
+- Leia mais sobre [diretivas aqui](https://br.vuejs.org/v2/guide/custom-directive.html).
