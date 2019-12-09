@@ -385,7 +385,13 @@ watch: {
 - Basta criar um array na sua estrutura de dados e atribuir esse array no v-model de cada input do tipo checkbox.
   - Automaticamente o Vue irá tratar essa situação e adicionar o valor armazenado no atributo `value` para o seu array.
 
-### 170. Manipulando Comboboz com `<select>` e `<option>`
+### 170. Manipulando Combobox com `<select>` e `<option>`
 
 - Uma observação importante é que, caso você possa usar o valor que está sendo exibido ao usuário como o valor do select, o atributo `value` não é necessário.
   - Automaticamente o que estava sendo exibido e foi selecionado pelo usuário, será setado como o valor do `<select>`
+
+### 174. Hora de Praticar - Formulários (Resposta)
+
+- Para implementar um `v-model` customizado em componentes próprios, ou seja, fazer com que o componente que você criou suporte a diretiva `v-model`, a base é:
+  - Tratar o valor recebido através da `prop "value()"`;
+  - Emitir (`$emit`) eventos do tipo `input` quando as `props` forem alteradas.
