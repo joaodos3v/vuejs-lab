@@ -443,3 +443,9 @@ watch: {
 - Os dois locais onde é possível utilizar filtros são dentro da renderização (`Double Mustache -> {{}}`) ou dentro do `v-bind -> :`.
   - Geralmente, esse tipo de estratégia que é muito fácil e prática é utilizada para conversões e mudanças em textos simples, onde não há uma carga muito grande de processamento.
   - Caso seja necessário um filtro mais robusto, que preciso de performance otimizada, o ideal é utilizar `computed properties`.
+
+### 197. Criando e Usando Mixins
+
+- `Mixins` nada mais são do que uma forma elegante de "misturar" componentes.
+  - Ou seja, se, de alguma forma, for necessário ter os dados, métodos, *watchers*, propriedades computadas ou filtros de outro componentes, por exemplo, ao invés de copiar e colar todo o código, é possível utilizar a propriedade `mixins: []`.
+- Vale ressaltar, por exemplo, que caso os métodos que seriam misturados ou mesmo os dados tenham um conflito de nomes com as propriedades do componente atual, as propriedades do **componente** serão mantidas (terão prioridade).
