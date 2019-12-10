@@ -483,3 +483,8 @@ watch: {
   - Ex.: `meuestilo-enter`
   - Caso um nome não seja informado, um `v` será adicionado automaticamente.
     - Ex.: `v-enter`
+
+### 208. Criando Transição "Fade" com Propriedade CSS Transition
+
+- Tanto no estilo `*-enter-to`, quanto no `*-leave`, o **padrão** do elemento é ficar com `opacity: 1;`.
+  - Portanto, não é necessário criar esse estilo apenas para dizer que o elemento deve ficar visível, pois isso será feito automaticamente.
