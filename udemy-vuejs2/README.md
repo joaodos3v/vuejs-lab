@@ -512,7 +512,7 @@ watch: {
 ### 215. Transicionar entre Múltiplos Elementos
 
 - A tag `<transition>` suporta apenas um único elemento dentro dela.
-  - Para tratar grupos, existe outra tag: a ``.
+  - Para tratar grupos, existe outra tag: a `<transition-group>`.
 - Além disso, quando se deseja altentar entre dois elementos (com `v-if/v-else`, pois `v-show` geraria problemas, uma vez que ele apenas "esconde" o elemento com `display: none;`), **deve-se** utilizar a diretiva `key`.
   - Essa diretiva nada mais é do que um identificador para cada um dos elementos, que irá permitir que o Vue.js entenda e reconheça qual componente deve ser exibido e qual deve ser removido.
 - Por fim, caso fique "estranho" ou seja necessário remover completamente o elemento original para, somente então, exibir o novo elemento, é possível utilizar a diretiva `mode` na tag `<transition>` e definir seu valor para **out-in**.
@@ -543,4 +543,5 @@ watch: {
 ### 221. Animando Listas com `<transition-group>`
 
 - O elemento `<transition-group>`, diferentemente do `<transition>`, **cria um elemento** no HTML final da aplicação: por padrão, o elemento `<span>`.
-  - Se desejar, é possível mudar para que o `<transition-group>` crie outro elemento.
+  - Se desejar, é possível mudar para que o `<transition-group>` crie outro elemento através da diretiva `tag`.
+    - Ex.: `<transition-group name="slide" tag="div"> ... </transition>`
