@@ -502,3 +502,9 @@ watch: {
     - Caso isso não seja o ideal, existe a diretiva `type` que permite que o desenvolvedor defina qual deve ser o efeito com "prioridade" (e, nesse caso, deve ser utilizado o efeito com **menor** tempo de duração).
       - Ex.: (*caso a ANIMAÇÃO tenha um tempo de duração menor*) => `<transition name="nomeAqui" type="animation">...</transition>`
       - Ex.: (*caso a TRANSIÇÃO tenha um tempo de duração menor*) => `<transition name="nomeAqui" type="transition">...</transition>`
+
+### 212. Configurando Animação no Carregamento do Componente
+
+- Quando um elemento estará sendo exibido na tela desde o carregamento da mesma (ou seja, ele estará visível desde a sua criação), por padrão, os efeitos de animação não serão aplicados no elemento (ele continuará sendo "inserido" na página abruptamente).
+  - Para resolver essa situação e "forçar" o elemento a executar os efeitos de animação configurados na sua criação, basta adicionar a diretiva `appear` no elemento. Isso fará com que o elemento execute as animações mesmo que ele esteja o tempo todo visível.
+    - Ex.: `<transition name="slide" appear>...</transition>`
