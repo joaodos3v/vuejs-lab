@@ -31,18 +31,14 @@
 
 
 		<hr>
-		<button @click="exibir2 = !exibir2">Mostrar</button>
+		<button @click="exibir2 = !exibir2">Alternar</button>
 		<transition
 			:css="false"
 			@before-enter="beforeEnter"
 			@enter="enter"
-			@after-enter="afterEnter"
-			@enter-cancelled="enterCancelled"
 			
 			@before-leave="beforeLeave"
-			@leave="leave"
-			@after-leave="afterLeave"
-			@leave-cancelled="leaveCancelled">
+			@leave="leave">
 			<div v-if="exibir2" class="caixa"></div>
 		</transition>	
 	</div>
@@ -56,40 +52,52 @@ export default {
 			msg: "Uma mensagem de informação para o usuário!",
 			exibir: false,
 			exibir2: true,
+			larguraBase: 0,
 			tipoAnimacao: "fade",
 		};
 	},
 
 	methods: {
+		animar(el, done, negativo) {
+			let rodada = 1;
+			const temporizador = setInterval(() => {
+				const novaLargura = this.larguraBase + (negativo ? -rodada * 10 : rodada * 10);
+				el.style.width = `${novaLargura}px`;
+				rodada++;
+				if (rodada > 30) {
+					clearInterval(temporizador);
+					done();
+				}
+			}, 20);
+		},
 		beforeEnter(el) {
 			window.console.log("beforeEnter");
+			this.larguraBase = 0;
+			el.style.width = `${this.larguraBase}px`;
 		},
 		enter(el, done) {
-			window.console.log("enter");
-
-			// É necessário chamar essa função "done" pois o Vue.js não tem como saber quando a animação acabou
-			// 	e, portanto, caso esse método não seja chamado, o evento "after-enter" não será acionado
-			done();
+			this.animar(el, done, false);
 		},
-		afterEnter(el) {
-			window.console.log("afterEnter");
-		},
-		enterCancelled() {
-			window.console.log("enterCancelled");
-		},
+		// afterEnter(el) {
+		// 	window.console.log("afterEnter");
+		// },
+		// enterCancelled() {
+		// 	window.console.log("enterCancelled");
+		// },
 		beforeLeave(el) {
 			window.console.log("beforeLeave");
+			this.larguraBase = 300;
+			el.style.width = `${this.larguraBase}px`;
 		},
 		leave(el, done) {
-			window.console.log("leave");
-			done();
+			this.animar(el, done, true);
 		},
-		afterLeave(el) {
-			window.console.log("afterLeave");
-		},
-		leaveCancelled() {
-			window.console.log("leaveCancelled");
-		},
+		// afterLeave(el) {
+		// 	window.console.log("afterLeave");
+		// },
+		// leaveCancelled() {
+		// 	window.console.log("leaveCancelled");
+		// },
 	}
 }
 </script>
