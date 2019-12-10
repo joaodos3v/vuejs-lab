@@ -465,3 +465,21 @@ watch: {
 
 - Documentação Oficial - [Filtros](https://br.vuejs.org/v2/guide/filters.html)
 - Documentação Oficial - [Mixins](https://br.vuejs.org/v2/guide/mixins.html)
+
+## Seção 14 - Adicionando Animações e Transições
+
+### 206. Configurando Transição
+
+- As 6 classes CSS que estão à disposição para serem utilizadas com Vue.js são:
+  - De **entrada**:
+    - `*-enter`
+    - `*-enter-active`
+    - `*-enter-to`
+  - De **saída**:
+    - `*-leave`
+    - `*-leave-active`
+    - `*-leave-to`
+- Todas essas nomenclaturas são padrões da própria lib e o `*` indica o nome do estilo customizado.
+  - Ex.: `meuestilo-enter`
+  - Caso um nome não seja informado, um `v` será adicionado automaticamente.
+    - Ex.: `v-enter`
