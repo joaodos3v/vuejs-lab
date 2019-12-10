@@ -9,10 +9,10 @@ export default {
 	created() {
 		window.console.log("exec!!!");
 
-		// this.$http.post("usuarios.json", {
-		// 	nome: "Maria",
-		// 	email: "maria@maria.com"
-		// }).then(res => window.console.log(res));
+		this.$http.post("usuarios.json", {
+			nome: "Maria",
+			email: "maria@maria.com"
+		}).then(res => window.console.log(res));
 	}
 }
 </script>
