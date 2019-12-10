@@ -508,3 +508,12 @@ watch: {
 - Quando um elemento estará sendo exibido na tela desde o carregamento da mesma (ou seja, ele estará visível desde a sua criação), por padrão, os efeitos de animação não serão aplicados no elemento (ele continuará sendo "inserido" na página abruptamente).
   - Para resolver essa situação e "forçar" o elemento a executar os efeitos de animação configurados na sua criação, basta adicionar a diretiva `appear` no elemento. Isso fará com que o elemento execute as animações mesmo que ele esteja o tempo todo visível.
     - Ex.: `<transition name="slide" appear>...</transition>`
+
+### 215. Transicionar entre Múltiplos Elementos
+
+- A tag `<transition>` suporta apenas um único elemento dentro dela.
+  - Para tratar grupos, existe outra tag: a ``.
+- Além disso, quando se deseja altentar entre dois elementos (com `v-if/v-else`, pois `v-show` geraria problemas, uma vez que ele apenas "esconde" o elemento com `display: none;`), **deve-se** utilizar a diretiva `key`.
+  - Essa diretiva nada mais é do que um identificador para cada um dos elementos, que irá permitir que o Vue.js entenda e reconheça qual componente deve ser exibido e qual deve ser removido.
+- Por fim, caso fique "estranho" ou seja necessário remover completamente o elemento original para, somente então, exibir o novo elemento, é possível utilizar a diretiva `mode` na tag `<transition>` e definir seu valor para **out-in**.
+  - Isso fará com que o primeiro elemento termine completamente sua transição para, só então, o elemento seguinte iniciar a sua.
