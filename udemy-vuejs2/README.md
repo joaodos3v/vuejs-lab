@@ -517,3 +517,19 @@ watch: {
   - Essa diretiva nada mais é do que um identificador para cada um dos elementos, que irá permitir que o Vue.js entenda e reconheça qual componente deve ser exibido e qual deve ser removido.
 - Por fim, caso fique "estranho" ou seja necessário remover completamente o elemento original para, somente então, exibir o novo elemento, é possível utilizar a diretiva `mode` na tag `<transition>` e definir seu valor para **out-in**.
   - Isso fará com que o primeiro elemento termine completamente sua transição para, só então, o elemento seguinte iniciar a sua.
+
+### 216. Escutando a Eventos de Transição (Hooks)
+
+- O princípio é o mesmo do CSS: existirá um elemento entrando e saindo da tela.
+  - Porém, nesse caso, existirão alguns "gatilhos" (métodos de ciclo de vida da tag `<transition>`) que serão utilizados para interceptar momentos específicos do elemento e executar algum tipo de trabalho.
+  - Esses gatilhos são:
+    - **4 métodos de entrada**:
+      - `before-enter`
+      - `enter`
+      - `after-enter`
+      - `enter-cancelled` => chamado eventualmente, quando a transição for cancelada (apenas)
+    - **4 métodos de saída**:
+      - `before-leave`
+      - `leave`
+      - `after-leave`
+      - `leave-cancelled` => chamado eventualmente, quando a transição for cancelada (apenas)
