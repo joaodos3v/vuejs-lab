@@ -28,6 +28,22 @@
 			<b-alert variant="warning" show v-if="exibir" key="info">{{ msg }}</b-alert>
 			<b-alert variant="dark" show v-else key="warn">{{ msg }}</b-alert>
 		</transition>
+
+
+		<hr>
+		<button @click="exibir2 = !exibir2">Mostrar</button>
+		<transition
+			@before-enter="beforeEnter"
+			@enter="enter"
+			@after-enter="afterEnter"
+			@enter-cancelled="enterCancelled"
+			
+			@before-leave="beforeLeave"
+			@leave="leave"
+			@after-leave="afterLeave"
+			@leave-cancelled="leaveCancelled">
+			<div v-if="exibir2" class="caixa"></div>
+		</transition>	
 	</div>
 </template>
 
@@ -38,8 +54,41 @@ export default {
 		return {
 			msg: "Uma mensagem de informação para o usuário!",
 			exibir: false,
+			exibir2: true,
 			tipoAnimacao: "fade",
 		};
+	},
+
+	methods: {
+		beforeEnter(el) {
+			window.console.log("beforeEnter");
+		},
+		enter(el, done) {
+			window.console.log("enter");
+
+			// É necessário chamar essa função "done" pois o Vue.js não tem como saber quando a animação acabou
+			// 	e, portanto, caso esse método não seja chamado, o evento "after-enter" não será acionado
+			done();
+		},
+		afterEnter(el) {
+			window.console.log("afterEnter");
+		},
+		enterCancelled() {
+			window.console.log("enterCancelled");
+		},
+		beforeLeave(el) {
+			window.console.log("beforeLeave");
+		},
+		leave(el, done) {
+			window.console.log("leave");
+			done();
+		},
+		afterLeave(el) {
+			window.console.log("afterLeave");
+		},
+		leaveCancelled() {
+			window.console.log("leaveCancelled");
+		},
 	}
 }
 </script>
@@ -54,6 +103,14 @@ export default {
 	margin-top: 60px;
 	font-size: 1.5rem;
 }
+
+.caixa {
+	height: 100px;
+	width: 300px;
+	margin: 30px auto;
+	background-color: lightgreen;
+}
+
 
 
 .fade-enter, .fade-leave-to {
