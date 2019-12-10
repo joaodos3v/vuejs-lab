@@ -2,7 +2,7 @@
 	<div id="app" class="container-fluid">
 		<h1>Animações</h1>
 		<hr>
-		<!-- <b-button variant="primary" class="mb-4" @click="exibir = !exibir">Mostrar Mensagem</b-button>
+		<b-button variant="primary" class="mb-4" @click="exibir = !exibir">Mostrar Mensagem</b-button>
 
 		<transition name="fade" appear>
 			<b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
@@ -49,7 +49,7 @@
 		</div>
 		<transition name="fade" mode="out-in">
 			<component :is="componenteSelecionado"></component>
-		</transition> -->
+		</transition>
 
 
 		<hr>
