@@ -545,3 +545,23 @@ watch: {
 - O elemento `<transition-group>`, diferentemente do `<transition>`, **cria um elemento** no HTML final da aplicação: por padrão, o elemento `<span>`.
   - Se desejar, é possível mudar para que o `<transition-group>` crie outro elemento através da diretiva `tag`.
     - Ex.: `<transition-group name="slide" tag="div"> ... </transition>`
+
+## Seção 16 - Rotas em uma Aplicação VueJS
+
+### 248. Entendendo os Modos de Rotas (Hash vs History)
+
+- Existem basicamente dois modos de navegação possíveis na nossa aplicação:
+  - O modo **Hash** -> `localhost:8080/#/...`
+  - E o modo **History** -> `localhost:8080/...`
+- Antes de tudo, é sempre bom ler a [Documentação Oficial - Vue Router](https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations)
+
+#### Modo Hash
+
+- Em um resumo bem simples, o modo `hash` recebe **todas** as requisições no `index.html` e chama `app.js`. A partir daí, o Vue.js é carregado, Vue-router, Vuex e tudo o mais. Ou seja, basicamente todas requisições vão pro mesmo lugar e, a partir desse ponto, o Vue.js começa a agir como uma SPA e o Vue-router, nesse caso, reconhece as rotas para renderizar o componente correto.
+  - Pode-se dizer, portanto, que as navegações nesse modo são conhecidas "apenas pelo navegador" - isto é, não tem "interferência direta do servidor web".
+
+#### Modo History
+
+- Já o modo `history` considera tudo que vem após a barra (`/usuario` levará *usuario* em consideração). O problema é que, caso não exista a rota `usuario` (nesse exemplo), a aplicação não irá para o `index.html` por padrão.
+  - É por isso que, nesse modo, é necessário realizar algumas configurações a mais, que indiquem que, quando a rota não for encontrada, a requisição deve ser redirecionada para o lugar correto.
+  - Ou seja, nesse modo o servidor "reconhece" todas requisições e é ele qume vai ter que redirecionar as mesmas para o `index.html`.
