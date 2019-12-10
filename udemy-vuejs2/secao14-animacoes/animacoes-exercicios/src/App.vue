@@ -6,6 +6,9 @@
 		<transition name="fade">
 			<b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
 		</transition>
+		<transition name="slide">
+			<b-alert variant="success" show v-if="exibir">{{ msg }}</b-alert>
+		</transition>
 	</div>
 </template>
 
@@ -41,4 +44,22 @@ export default {
 	transition: opacity 2s;
 }
 
+
+@keyframes slide-in {
+	from { transform: translateY(40px); }
+	to { transform: translateY(0); }
+}
+
+@keyframes slide-out {
+	from { transform: translateY(0); }
+	to { transform: translateY(40px); }
+}
+
+.slide-enter-active {
+	animation: slide-in 2s ease;
+}
+
+.slide-leave-active {
+	animation: slide-out 2s ease;
+}
 </style>

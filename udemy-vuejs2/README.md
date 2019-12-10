@@ -488,3 +488,8 @@ watch: {
 
 - Tanto no estilo `*-enter-to`, quanto no `*-leave`, o **padrão** do elemento é ficar com `opacity: 1;`.
   - Portanto, não é necessário criar esse estilo apenas para dizer que o elemento deve ficar visível, pois isso será feito automaticamente.
+
+### 209. Criando Transição "Slide" com Propriedade CSS animation
+
+- Para definir qual será a "forma" como uma animação será feita, é possível utilizar as [CSS animation-timing-function Properties](https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp).
+  - Elas, basicamente, permitem que seja especificado uma curva de velocidade da animação.
