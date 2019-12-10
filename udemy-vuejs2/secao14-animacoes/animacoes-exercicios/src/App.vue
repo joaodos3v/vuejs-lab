@@ -31,7 +31,7 @@
 
 
 		<hr>
-		<button @click="exibir2 = !exibir2">Alternar</button>
+		<b-button @click="exibir2 = !exibir2">Alternar</b-button>
 		<transition
 			:css="false"
 			@before-enter="beforeEnter"
@@ -41,12 +41,26 @@
 			@leave="leave">
 			<div v-if="exibir2" class="caixa"></div>
 		</transition>	
+
+		<hr>
+		<div class="mb-4">
+			<b-button variant="primary" @click="componenteSelecionado = 'AlertaInfo'" class="mr-2">AlertaInfo</b-button>
+			<b-button variant="secondary" @click="componenteSelecionado = 'AlertaAdvertencia'">AlertaAdvertencia</b-button>
+		</div>
+		<transition name="fade" mode="out-in">
+			<component :is="componenteSelecionado"></component>
+		</transition>
 	</div>
 </template>
 
 <script>
+import AlertaAdvertencia from "@/AlertaAdvertencia";
+import AlertaInfo from "@/AlertaInfo";
+
 
 export default {
+	components: { AlertaAdvertencia, AlertaInfo },
+
 	data() {
 		return {
 			msg: "Uma mensagem de informação para o usuário!",
@@ -54,6 +68,7 @@ export default {
 			exibir2: true,
 			larguraBase: 0,
 			tipoAnimacao: "fade",
+			componenteSelecionado: "AlertaInfo",
 		};
 	},
 
