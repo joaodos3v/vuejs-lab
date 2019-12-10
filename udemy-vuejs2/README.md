@@ -539,3 +539,8 @@ watch: {
 - Apesar de ser possível misturar efeitos CSS e JavaScript, existe a diretiva `css` do elemento `<transition>` que, caso receba o valor `false`, deixará explícito que o CSS não deve afetar esse elemento.
   - É ideal para ser utilizada em situações em que os efeitos e animações são feitos completamente em JavaScript, pois irá impedir qualquer tipo de "interferência" CSS.
   - Ex.: `<transition :css="false ..."`
+
+### 221. Animando Listas com `<transition-group>`
+
+- O elemento `<transition-group>`, diferentemente do `<transition>`, **cria um elemento** no HTML final da aplicação: por padrão, o elemento `<span>`.
+  - Se desejar, é possível mudar para que o `<transition-group>` crie outro elemento.
