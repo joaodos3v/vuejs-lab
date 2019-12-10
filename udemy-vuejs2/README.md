@@ -455,3 +455,8 @@ watch: {
 - Também é possível criar um `mixin` global. No entanto, deve-se ter um certo cuidado ao utilizá-lo (bem mais do que o local).
   - Isso porque ele será executado em **todos** os componentes.
   - Além disso, vale ressaltar que, caso um método de ciclo de vida seja utilizado dentro de um `mixin`, ele será executado tanto para o `mixin` quanto para o componente (isto é, será chamado 2x e a performance será prejudicada).
+
+### 200. Hora de Praticar - Filtros e Mixins (Resposta)
+
+- Vale ressaltar que um filtro pode ser utilizado com o nome exatamente igual à função em que ele foi declarado. Ex.: `... | nomedoFiltro`
+  - Mas, também existe a possibilidade de trocar todos os `camelCase` por hífen. Ex.: `... | nome-do-filtro`.
