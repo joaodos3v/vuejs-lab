@@ -533,3 +533,9 @@ watch: {
       - `leave`
       - `after-leave`
       - `leave-cancelled` => chamado eventualmente, quando a transição for cancelada (apenas)
+
+### 218. Excluindo CSS da Animação
+
+- Apesar de ser possível misturar efeitos CSS e JavaScript, existe a diretiva `css` do elemento `<transition>` que, caso receba o valor `false`, deixará explícito que o CSS não deve afetar esse elemento.
+  - É ideal para ser utilizada em situações em que os efeitos e animações são feitos completamente em JavaScript, pois irá impedir qualquer tipo de "interferência" CSS.
+  - Ex.: `<transition :css="false ..."`
