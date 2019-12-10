@@ -460,3 +460,8 @@ watch: {
 
 - Vale ressaltar que um filtro pode ser utilizado com o nome exatamente igual à função em que ele foi declarado. Ex.: `... | nomedoFiltro`
   - Mas, também existe a possibilidade de trocar todos os `camelCase` por hífen. Ex.: `... | nome-do-filtro`.
+
+### ENCERRAMENTO - SEÇÃO 13
+
+- Documentação Oficial - [Filtros](https://br.vuejs.org/v2/guide/filters.html)
+- Documentação Oficial - [Mixins](https://br.vuejs.org/v2/guide/mixins.html)
