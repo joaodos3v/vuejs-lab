@@ -493,3 +493,12 @@ watch: {
 
 - Para definir qual será a "forma" como uma animação será feita, é possível utilizar as [CSS animation-timing-function Properties](https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp).
   - Elas, basicamente, permitem que seja especificado uma curva de velocidade da animação.
+
+### 210. Misturando as Propriedades transition e animation
+
+- É comum existir essa "mistura" de efeitos de transição e animação.
+  - No entanto, caso o tempo de duração dos dois efeitos seja muito destoante entre si, possivelmente ocorra problemas visuais (elemento não sumir como gostaria; retornar à posição original; enfim, comportamentos não esperados).
+    - Isso ocorre porque o Vue.js, **por padrão**, dará "prioridade" para o efeito com maior tempo de duração.
+    - Caso isso não seja o ideal, existe a diretiva `type` que permite que o desenvolvedor defina qual deve ser o efeito com "prioridade" (e, nesse caso, deve ser utilizado o efeito com **menor** tempo de duração).
+      - Ex.: (*caso a ANIMAÇÃO tenha um tempo de duração menor*) => `<transition name="nomeAqui" type="animation">...</transition>`
+      - Ex.: (*caso a TRANSIÇÃO tenha um tempo de duração menor*) => `<transition name="nomeAqui" type="transition">...</transition>`
