@@ -54,6 +54,9 @@ export default {
       
       // this.$store.dispatch("adicionarProduto", produto);
       this.adicionarProduto(produto);
+
+      window.console.log(this.$store.getters.getNome);
+      window.console.log(this.$store.getters.getNomeCompleto);
     }
   }
 };
