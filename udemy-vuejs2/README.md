@@ -604,3 +604,10 @@ beforeRouteEnter(to, from, next) {
   - Ex.: `computed: mapGetters(["getter1"]),`
 - Enquanto que as `mutations` são definidas dentro dos **métodos**.
   - Ex.: `...mapMutations(["mutation1"]),`
+
+### 285. Como Actions Complementam as Mutation
+
+- Na verdade, as `Actions` seriam um "intermediário" para as `Mutations`.
+  - Tendo em vista que o objetivo das mutations é, realmente, alterar o dado na `store`, seria interessante que ela fizesse apenas isso.
+  - Então, as actions funcionam como um local para inserir regras de negócio que devem ser compartilhadas para, caso tudo esteja correto, invocar a mutation e realmente alterar os dados.
+    - Para invocar uma action, utiliza-se o método `dispatch`.
