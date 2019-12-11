@@ -5,7 +5,7 @@
     
     <!-- :to="`/usuario/${id}/editar`" -->
     <router-link tag="button" primario 
-      :to="{ name: 'editarUsuario', params: { id }, query: { completo: false, lingua: 'en' } }">
+      :to="{ name: 'editarUsuario', params: { id }, query: { completo: false, lingua: 'en' }, hash: '#rodape' }">
       Editar
     </router-link>
   </div>
