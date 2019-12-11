@@ -611,3 +611,7 @@ beforeRouteEnter(to, from, next) {
   - Tendo em vista que o objetivo das mutations é, realmente, alterar o dado na `store`, seria interessante que ela fizesse apenas isso.
   - Então, as actions funcionam como um local para inserir regras de negócio que devem ser compartilhadas para, caso tudo esteja correto, invocar a mutation e realmente alterar os dados.
     - Para invocar uma action, utiliza-se o método `dispatch`.
+
+### 289. Resumo do Vuex
+
+![Resumo de uma arquitetura simples - Vuex](./secao17-vuex/vuex.png)
