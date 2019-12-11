@@ -26,6 +26,11 @@ export default {
   },
 
   methods: {
+    // adicionarProduto(produto) {
+    //   this.$store.dispatch("adicionarProduto", produto);
+    // },
+    
+    /** Essa é uma forma resumida de executar o método acima */
     ...mapActions(["adicionarProduto"]),
 
     adicionar() {
@@ -40,8 +45,8 @@ export default {
       // this.$store.state.produtos.push(produto);
       // this.$store.commit("adicionarProduto", produto);
       
-      // this.adicionarProduto(produto);
-      this.$store.dispatch("adicionarProduto", produto);
+      // this.$store.dispatch("adicionarProduto", produto);
+      this.adicionarProduto(produto);
     }
   }
 };
