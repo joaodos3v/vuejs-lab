@@ -16,7 +16,7 @@ import { mapGetters } from "vuex";
 
 export default {
   /** Essa é uma forma de poder "apelidar" os getters */
-  computed: mapGetters({
+  computed: mapGetters("carrinho", {
     total: "valorTotal"
   }),
 

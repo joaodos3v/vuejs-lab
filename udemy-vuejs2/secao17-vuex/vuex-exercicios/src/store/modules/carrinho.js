@@ -1,4 +1,5 @@
 export default {
+  namespaced: true,
 
   state: {
     produtos: [],
@@ -17,6 +18,7 @@ export default {
   },
 
   actions: {
+    /** Caso desejasse, daria para retornar um objeto com "root: true" e colocar a lógica no "handler" para definir ele com global */
     adicionarProduto({ commit }, payload) {
       setTimeout(() => {
         commit("adicionarProduto", payload)

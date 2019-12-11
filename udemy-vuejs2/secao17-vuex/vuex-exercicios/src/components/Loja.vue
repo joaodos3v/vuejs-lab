@@ -37,8 +37,8 @@ export default {
     //   this.$store.dispatch("adicionarProduto", produto);
     // },
     
-    /** Essa é uma forma resumida de executar o método acima */
-    ...mapActions(["adicionarProduto"]),
+    /** Essa é uma forma resumida de executar o método acima - o 1º parâmetro é o namespace */
+    ...mapActions("carrinho", ["adicionarProduto"]),
 
     adicionar() {
       const produto = {

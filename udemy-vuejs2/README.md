@@ -615,3 +615,8 @@ beforeRouteEnter(to, from, next) {
 ### 289. Resumo do Vuex
 
 ![Resumo de uma arquitetura simples - Vuex](./secao17-vuex/vuex.png)
+
+### 293. Usando Namespaces para Evitar Conflitos de Nomes
+
+- Principalmente em projetos maiores, utilizar a técnica de *namespace* nos módulos da aplicação é essencial para obter uma tranquilidade maior na hora de declarar *mutations, actions e getters*, por exemplo.
+  - Isso porque, caso essa técnica não seja utilizada, todos os atributos citados acima serão colocados na "raiz" da *store* e, caso existam nomes iguais, haverá problemas na aplicação.
