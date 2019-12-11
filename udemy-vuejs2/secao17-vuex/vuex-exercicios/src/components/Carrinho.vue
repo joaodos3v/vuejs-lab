@@ -37,7 +37,7 @@ export default {
 			total: "valorTotal"
 		}),
     produtos() {
-      return this.$store.state.produtos;
+      return this.$store.state.carrinho.produtos;
     }
   }
 };
