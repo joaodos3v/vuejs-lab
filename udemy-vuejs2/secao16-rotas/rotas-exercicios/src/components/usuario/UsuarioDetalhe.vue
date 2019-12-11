@@ -22,7 +22,7 @@ export default {
     //   window.console.log("dentro do componente, exibindo uma propriedade no next cbk -> usuároi detalhe -> ", vm.id);
     // });
     
-    const autenticado = false;
+    const autenticado = true;
     autenticado ? next() : next(false);
   },
 
