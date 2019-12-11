@@ -597,3 +597,10 @@ beforeRouteEnter(to, from, next) {
 - No contexto do Vuex, **mutation** é equivalente a um *setter* e é bastante utilizada para centralizar as alterações no estado da aplicação (evitando que todos os componentes alterem o estado diretamente à qualquer momento).
 - Para efetivar essa mudança, emite-se um **commit**.
   - O dado enviado para atualizar as propriedades é conhecido como **payload**.
+
+### 283. Usando Mutations
+
+- Os `getters` costumam ser inseridos dentro das **propriedades computadas**.
+  - Ex.: `computed: mapGetters(["getter1"]),`
+- Enquanto que as `mutations` são definidas dentro dos **métodos**.
+  - Ex.: `...mapMutations(["mutation1"]),`
