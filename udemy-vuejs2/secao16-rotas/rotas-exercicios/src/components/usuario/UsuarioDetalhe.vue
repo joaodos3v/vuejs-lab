@@ -4,7 +4,8 @@
     <p><strong>Código:</strong> {{ id }}</p>
     
     <!-- :to="`/usuario/${id}/editar`" -->
-    <router-link tag="button" primario :to="{ name: 'editarUsuario', params: { id } }">
+    <router-link tag="button" primario 
+      :to="{ name: 'editarUsuario', params: { id }, query: { completo: false, lingua: 'en' } }">
       Editar
     </router-link>
   </div>
