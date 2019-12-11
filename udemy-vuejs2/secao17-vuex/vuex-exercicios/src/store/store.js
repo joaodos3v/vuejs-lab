@@ -6,7 +6,9 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   
   state: {
-    produtos: []
+    produtos: [],
+    quantidade: 2,
+    preco: 19.99,
   },
 
   getters: {
@@ -18,7 +20,13 @@ export default new Vuex.Store({
   mutations: {
     adicionarProduto(state, payload) {
       state.produtos.push(payload);
-    }
+    },
+    setQuantidade(state, payload) {
+      state.quantidade = payload;
+    },
+    setPreco(state, payload) {
+      state.preco = payload;
+    },
   },
 
   actions: {
