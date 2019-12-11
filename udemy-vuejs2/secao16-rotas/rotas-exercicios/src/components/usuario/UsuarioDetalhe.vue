@@ -14,6 +14,18 @@
 <script>
 export default {
   props: ["id"],
+  
+  beforeRouteEnter(to, from, next) {
+    window.console.log("dentro do componente -> usuário detalhe");
+    
+    // next(vm => {
+    //   window.console.log("dentro do componente, exibindo uma propriedade no next cbk -> usuároi detalhe -> ", vm.id);
+    // });
+    
+    const autenticado = false;
+    autenticado ? next() : next(false);
+  },
+
   // data() {
   //   return {
   //     id: this.$route.params.id,

@@ -565,3 +565,27 @@ watch: {
 - Já o modo `history` considera tudo que vem após a barra (`/usuario` levará *usuario* em consideração). O problema é que, caso não exista a rota `usuario` (nesse exemplo), a aplicação não irá para o `index.html` por padrão.
   - É por isso que, nesse modo, é necessário realizar algumas configurações a mais, que indiquem que, quando a rota não for encontrada, a requisição deve ser redirecionada para o lugar correto.
   - Ou seja, nesse modo o servidor "reconhece" todas requisições e é ele qume vai ter que redirecionar as mesmas para o `index.html`.
+
+### 268. Usando o Evento "beforeEnter"
+
+- Para criar *"middlewares"* na aplicação, ou seja, interceptar requisições para executar certas tarefas (como impedir que o componente seja renderizado caso o usuário não seja admin), existem três estratégias com Vue.js + Vue-Router:
+  - **De forma global:** qualquer transição para componente invocará esse trecho de código.
+    - `beforeEach(to, from, next) -> ...`
+  - **Dentro do router:** coloca uma validação para uma rota específica.
+    - `beforeEnter(to, from, next) -> ...`
+  - **No ciclo de vida do componente:** a verificação é colocada dentro do próprio componente, em um dos seus métodos de ciclo de vida.
+    - `beforeRouteEnter(to, from, next) { ...`
+      - *Vale destacar que é dentro da instância do componente, **não** dentro de `methods`*
+      - Também vale o lembrete de que, nesse método, o componente **nem foi criado ainda** e, por isso, a propriedade `this` não aponta para o componente e também não é possível acessar valores e nem chamar seus métodos.
+        - Caso seja necessário acessar as propriedades do componente **dentro desse método**, é possível chamar uma função callback. Ex.:
+
+```javascript
+beforeRouteEnter(to, from, next) {
+  // ainda não seria possível acessar nenhuma propriedade da instância do componente
+  // código aqui...
+
+  next(vm => {
+    // aqui já é possível acessar os atributos, e.g. vm.id
+  });
+},
+```
