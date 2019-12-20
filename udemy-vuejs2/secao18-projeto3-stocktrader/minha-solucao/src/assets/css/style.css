@@ -1,0 +1,21 @@
+/* Remove a estilização padrão do elemento <li> */
+li {
+  list-style: none;
+}
+
+/* Componente card */
+.card-title {
+  color: white;
+  background-color: #558B2F;
+}
+
+.card-title-info {
+  color: white;
+  background-color: #0277BD;
+}
+
+/* Botão ativo */
+.active-button {
+  background-color: #cec6c6;
+  border-radius: 5px;
+}
