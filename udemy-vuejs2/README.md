@@ -661,3 +661,12 @@ beforeRouteEnter(to, from, next) {
 
 - Essa etapa é muito importante em termos de desempenho pois, ao criar a distribuição dinâmica do seu app, haverá uma instância dele nas mais diversas partes do mundo.
   - Com isso, o acesso ao seu site será muito mais otimizado.
+
+## Seção 20 - Bonus: Projeto #04 - Projeto Calculadora
+
+### 331. Implementando a Lógica
+
+```javascript
+// Essa função faz com que o objeto retorne ao estado inicial (reset no componente)
+Object.assign(this.$data, this.$options.data());
+```
