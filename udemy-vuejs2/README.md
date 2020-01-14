@@ -648,3 +648,12 @@ beforeRouteEnter(to, from, next) {
       - **Documento de erro:** index.html
       - **Salvar**
 - Nesse momento, já deve ser possível acessar um link válido da sua aplicação.
+
+### 321. Criar Certificado SSL
+
+- Para gerar um certificado:
+  - **AWS Certificate Manager**
+  - **Provisione certificados**: comece a usar
+  - **Solicitar um certificado público**
+  - Nesse passo, é necessário verificar seu DNS e confirmar que você é o "dono" do domínio... (registro.br)
+
