@@ -244,7 +244,7 @@
       - Adicionar Plugin (PWA, ESLint, SASS...)
       - Salvar como novo Preset?
   - **Desenvolvimento & Build**
-  - **Adicionar Plugins** 
+  - **Adicionar Plugins**
     - `vue add @vue/nome-plugin` ou
     - Adicionar plugins de terceiros (o comando muda um pouco)
 
@@ -624,3 +624,9 @@ beforeRouteEnter(to, from, next) {
 ### ENCERRAMENTO - SEÇÃO 17
 
 - Documentação Oficial - [Vuex](https://vuex.vuejs.org/guide/)
+
+## Seção 18 - Projeto #03 - The Stock Trader
+
+### ENCERRAMENTO - SEÇÃO 18
+
+- Documentação Oficial - [Vue Developer Tools](https://github.com/vuejs/vue-devtools)
