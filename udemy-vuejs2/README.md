@@ -657,3 +657,7 @@ beforeRouteEnter(to, from, next) {
   - **Solicitar um certificado público**
   - Nesse passo, é necessário verificar seu DNS e confirmar que você é o "dono" do domínio... (registro.br)
 
+### 322. Criar Distribuição no CloudFront (CDN)
+
+- Essa etapa é muito importante em termos de desempenho pois, ao criar a distribuição dinâmica do seu app, haverá uma instância dele nas mais diversas partes do mundo.
+  - Com isso, o acesso ao seu site será muito mais otimizado.
