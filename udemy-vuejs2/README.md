@@ -630,3 +630,5 @@ beforeRouteEnter(to, from, next) {
 ### ENCERRAMENTO - SEÇÃO 18
 
 - Documentação Oficial - [Vue Developer Tools](https://github.com/vuejs/vue-devtools)
+
+## Seção 19 - Publicando uma Aplicação VueJS na Amazon
