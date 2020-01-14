@@ -632,3 +632,19 @@ beforeRouteEnter(to, from, next) {
 - Documentação Oficial - [Vue Developer Tools](https://github.com/vuejs/vue-devtools)
 
 ## Seção 19 - Publicando uma Aplicação VueJS na Amazon
+
+### 320. Deploy do Frontend no S3
+
+- Basicamente, após criar uma conta na Amazon, será necessário criar um bucket no S3.
+- Ao selecionar essa opção, basta dar um nome para esse bucket e **Próximo**.
+  - **Próximo**
+  - Neste passo, é necessário **desmarcar** a opção que bloqueia *todo* o acesso público. Pois, como utilizaremos esse bucket  como um site, é necessário que os usuários tenham acesso aos arquivos. **Próximo**
+  - **Criar bucket**
+- Então, basta **entrar no bucket** que acabou de ser criado
+  - Fazer o upload do conteúdo da pasta **dist**
+  - Acessar a aba **Propriedades**
+    - **Hospedagem de site estático**
+      - **Documentos de índice:** index.html
+      - **Documento de erro:** index.html
+      - **Salvar**
+- Nesse momento, já deve ser possível acessar um link válido da sua aplicação.
