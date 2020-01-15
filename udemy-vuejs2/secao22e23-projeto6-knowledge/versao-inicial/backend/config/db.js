@@ -1,4 +1,7 @@
-const config = required("../knexfile.js")
+const config = require("../knexfile.js")
 const knex = require("knex")(config)
 
-module.exports = knex
+// Toda vez que "subir" o backend, automaticamente executa as migrations - no entanto, em produção isso não é tão aconselhável
+knex.migrate.latest([config]);
+
+module.exports = knex;
