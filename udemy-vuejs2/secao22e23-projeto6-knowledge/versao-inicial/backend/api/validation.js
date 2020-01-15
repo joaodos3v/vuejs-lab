@@ -26,6 +26,12 @@ module.exports = app => {
     }
   }
 
-  return { existsOrError, notExistsOrError, equalsOrError };
+  function lessEqualOrError(value, msg, size = 255) {
+    if (typeof value === "string" && value.length > size) {
+      throw msg;
+    }
+  }
+
+  return { existsOrError, notExistsOrError, equalsOrError, lessEqualOrError };
 }
 

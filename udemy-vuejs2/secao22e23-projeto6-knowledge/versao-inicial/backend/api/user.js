@@ -55,10 +55,10 @@ module.exports = app => {
 
   const getById = (req, res) => {
     const userId = req.params.id;
-
     app.db("users")
       .select("id", "name", "email", "admin")
       .where({ id: userId })
+      .first()
       .then(user => res.json(user))
       .catch(err => res.status(500).send(err));
   };
