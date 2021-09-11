@@ -1,3 +1,9 @@
+# Custom
+.DS_Store
+node_modules
+/dist
+.git
+
 # Logs
 logs
 *.log
